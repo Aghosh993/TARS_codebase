@@ -1,0 +1,11 @@
+digraph "NVIC Defines"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node2 [label="Cortex M0/M3/M4 System\l Interrupts",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__nvic__sysint.html",tooltip="IRQ numbers -3 and -6 to -9 are reserved. "];
+  Node1 [label="CM3 Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CM3__defines.html",tooltip="Defined Constants and Types for Cortex M3 core features. "];
+  Node0 [label="NVIC Defines",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+}

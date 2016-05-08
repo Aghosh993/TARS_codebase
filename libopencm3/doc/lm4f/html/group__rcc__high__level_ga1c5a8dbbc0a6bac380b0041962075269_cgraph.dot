@@ -1,0 +1,15 @@
+digraph "rcc_change_pll_divisor"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="rcc_change_pll_divisor",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="rcc_pll_bypass_disable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__low__level.html#gabbbe68ef690e48ae19d4ff04e69cc9c3",tooltip="Disable the PLL bypass and use the PLL clock. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="rcc_pll_bypass_enable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__low__level.html#ga269054cc63981ae593e6820de2fe76b1",tooltip="Enable the PLL bypass and use the oscillator clock. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="rcc_set_pll_divisor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__low__level.html#ga104041e1468a0fc62d6c584a25859053",tooltip="Set the PLL clock divisor (from 400MHz) "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="rcc_wait_for_pll_ready",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__low__level.html#ga0f5f3bea5dbfde10760a9cd775951a51",tooltip="Wait for main PLL to lock. "];
+}

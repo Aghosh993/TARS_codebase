@@ -1,0 +1,23 @@
+digraph "SPI Defines"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="STM32F2xx Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__STM32F2xx__defines.html",tooltip="Defined Constants and Types for the STM32F2xx series. "];
+  Node2 [label="SPI Register base address",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__spi__reg__base.html"];
+  Node8 [label="SPI data frame format",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__spi__dff.html"];
+  Node7 [label="SPI clock phase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__spi__cpha.html"];
+  Node0 [label="SPI Defines",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 [label="SPI lsb/msb first",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__spi__lsbfirst.html"];
+  Node6 [label="SPI clock polarity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__spi__cpol.html"];
+  Node4 [label="SPI peripheral baud\l rates",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__spi__baudrate.html"];
+  Node5 [label="SPI peripheral baud\l rate prescale values",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__spi__br__pre.html"];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node5 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node6 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node7 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node8 [shape=plaintext, dir="back", style="solid"];
+}

@@ -1,0 +1,21 @@
+digraph "ADC"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node7 [label="ADC Analog watchdog API",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__api__wdg.html",tooltip="ADC analog watchdog API definitions. "];
+  Node2 [label="ADC Operation Modes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__api__opmode.html",tooltip="ADC Result API. "];
+  Node4 [label="ADC Trigger API",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__api__trigger.html",tooltip="ADC Trigger API. "];
+  Node6 [label="ADC Basic configuration API",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__api__config.html",tooltip="ADC Basic configuration API. "];
+  Node1 [label="STM32F0xx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__STM32F0xx.html",tooltip="Libraries for ST Microelectronics STM32F0xx series. "];
+  Node5 [label="ADC Interrupt configuration API",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__api__interrupts.html",tooltip="ADC Interrupt configuration API. "];
+  Node0 [label="ADC",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 [label="ADC Result API",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__api__result.html",tooltip="ADC Result API. "];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node5 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node6 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node7 [shape=plaintext, dir="back", style="solid"];
+}

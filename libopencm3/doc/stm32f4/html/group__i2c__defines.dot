@@ -1,0 +1,17 @@
+digraph "I2C Defines"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="STM32F4xx Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__STM32F4xx__defines.html",tooltip="Defined Constants and Types for the STM32F4xx series. "];
+  Node4 [label="I2C peripheral clock\l duty cycles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__i2c__duty__cycle.html"];
+  Node3 [label="I2C clock frequency\l settings",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__i2c__clock.html"];
+  Node0 [label="I2C Defines",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 [label="I2C register base address",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__i2c__reg__base.html"];
+  Node5 [label="I2C Read/Write bit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__i2c__rw.html"];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node5 [shape=plaintext, dir="back", style="solid"];
+}

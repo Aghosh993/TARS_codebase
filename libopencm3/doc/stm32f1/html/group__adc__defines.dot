@@ -1,0 +1,25 @@
+digraph "ADC Defines"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="STM32F1xx Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__STM32F1xx__defines.html",tooltip="Defined Constants and Types for the STM32F1xx series. "];
+  Node9 [label="ADC Channel Numbers",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__channel.html"];
+  Node2 [label="ADC Mode Selection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__cr1__dualmod.html"];
+  Node5 [label="ADC Injected Trigger\l Identifier for ADC1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__trigger__injected__12.html",tooltip="and ADC2 "];
+  Node4 [label="ADC Trigger Identifier\l for ADC3",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__trigger__regular__3.html"];
+  Node3 [label="ADC Trigger Identifier\l for ADC1 and ADC2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__trigger__regular__12.html"];
+  Node7 [label="ADC Sample Time Selection\l for All Channels",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__sample__rg.html"];
+  Node0 [label="ADC Defines",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node6 [label="ADC Injected Trigger\l Identifier for ADC3",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__trigger__injected__3.html"];
+  Node8 [label="ADC register base addresses",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__reg__base.html"];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node5 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node6 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node7 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node8 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node9 [shape=plaintext, dir="back", style="solid"];
+}

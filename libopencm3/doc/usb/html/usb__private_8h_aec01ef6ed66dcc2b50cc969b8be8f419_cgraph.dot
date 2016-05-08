@@ -1,0 +1,13 @@
+digraph "_usbd_standard_request_interface"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="_usbd_standard_request\l_interface",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="usb_standard_get_interface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__standard__file.html#ga22c09fa8b89c6d0cb46e290cfecdf33f"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="usb_standard_interface\l_get_status",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__standard__file.html#ga3af045144aef2572263f2ec0a2fdbef9"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="usb_standard_set_interface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__standard__file.html#ga137aae06450b52a0c22f7ffa6fba5ba0"];
+}

@@ -12,15 +12,15 @@
 #include <libopencm3/stm32/usart.h>
 
 #ifndef STDIN_USART
-#define STDIN_USART     2
+#define STDIN_USART     1
 #endif
 
 #ifndef STDOUT_USART
-#define STDOUT_USART    2
+#define STDOUT_USART    1
 #endif
 
 #ifndef STDERR_USART
-#define STDERR_USART    2
+#define STDERR_USART    1
 #endif
 
 #undef errno

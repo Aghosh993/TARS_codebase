@@ -1,0 +1,21 @@
+digraph "LM4F Defines"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node2 [label="Nested Vectored Interrupt\l Controller",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__nvic__defines.html",tooltip="Defined Constants and Types for the LM4F Nested Vectored Interrupt Controller "];
+  Node3 [label="Reset and Clock Control",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__defines.html",tooltip="Defined Constants and Types for the LM4F Reset and Clock Control "];
+  Node6 [label="UART Control",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__uart__defines.html",tooltip="Defined Constants and Types for the LM4F UART Control "];
+  Node4 [label="Synchronous Serial\l Interface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__ssi__defines.html",tooltip="Defined Constants and Types for the LM4F Synchronous Serial Interface (SSI) "];
+  Node5 [label="System Control",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__systemcontrol__defines.html",tooltip="Defined Constants and Types for the LM4F System Control "];
+  Node1 [label="General Purpose I/O\l Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gpio__defines.html",tooltip="Defined Constants and Types for the LM4F General Purpose I/O "];
+  Node0 [label="LM4F Defines",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node7 [label="USB Controller",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__defines.html",tooltip="Defined Constants and Types for the LM4F USB Controller "];
+  Node0->Node1 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node5 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node6 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node7 [shape=plaintext, dir="back", style="solid"];
+}

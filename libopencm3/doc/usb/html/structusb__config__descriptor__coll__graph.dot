@@ -1,0 +1,14 @@
+digraph "usb_config_descriptor"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="usb_config_descriptor",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" interface" ,fontname="Helvetica"];
+  Node2 [label="usb_config_descriptor\l::usb_interface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structusb__config__descriptor_1_1usb__interface.html"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" iface_assoc" ,fontname="Helvetica"];
+  Node3 [label="usb_iface_assoc_descriptor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structusb__iface__assoc__descriptor.html"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" altsetting" ,fontname="Helvetica"];
+  Node4 [label="usb_interface_descriptor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structusb__interface__descriptor.html"];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" endpoint" ,fontname="Helvetica"];
+  Node5 [label="usb_endpoint_descriptor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structusb__endpoint__descriptor.html"];
+}

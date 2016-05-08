@@ -1,0 +1,15 @@
+digraph "_usbd_control_in"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="_usbd_control_in",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="stall_transaction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__control__file.html#gaf6f522923d66ffdea79fbbd4decc31d4"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="usbd_ep_stall_set",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__driver__defines.html#ga6d16be856512df298e40dfa31a216172"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="usb_control_send_chunk",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__control__file.html#ga46375610ee21a2c8ab4a06fe3bd70291"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="usbd_ep_write_packet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__driver__defines.html#gaa5b245bdd9757cdc79d1fe721ebcf03f"];
+}

@@ -1,0 +1,23 @@
+digraph "Generic USB Defines"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node5 [label="USB MSC Type Definitions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__msc__defines.html",tooltip="Defined Constants and Types for the USB MSC Type Definitions "];
+  Node3 [label="USB DFU Type Definitions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__dfu__defines.html",tooltip="Defined Constants and Types for the USB DFU Type Definitions "];
+  Node8 [label="USB Private Structures",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__private__defines.html",tooltip="Defined Constants and Types for the USB Private Structures "];
+  Node4 [label="USB HID Type Definitions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__hid__defines.html",tooltip="Defined Constants and Types for the USB HID Type Definitions "];
+  Node7 [label="USB Standard Structure\l Definitions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__type__defines.html",tooltip="Defined Constants and Types for the USB Standard Structure Definitions "];
+  Node1 [label="USB Audio Type Definitions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__audio__defines.html",tooltip="Defined Constants and Types for the USB Audio Type Definitions "];
+  Node0 [label="Generic USB Defines",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node6 [label="USB Drivers",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__driver__defines.html",tooltip="Defined Constants and Types for the USB Drivers "];
+  Node2 [label="USB CDC Type Definitions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__cdc__defines.html",tooltip="Defined Constants and Types for the USB CDC Type Definitions "];
+  Node0->Node1 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node5 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node6 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node7 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node8 [shape=plaintext, dir="back", style="solid"];
+}

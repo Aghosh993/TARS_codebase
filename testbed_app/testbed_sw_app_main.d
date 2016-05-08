@@ -55,15 +55,13 @@ testbed_sw_app_main.o: testbed_sw_app_main.c \
  ../libopencm3/include/libopencm3/stm32/f3/spi.h \
  ../libopencm3/include/libopencm3/stm32/common/spi_common_f03.h \
  ../libopencm3/include/libopencm3/stm32/common/spi_common_all.h \
+ ../libopencm3/include/libopencm3/stm32/adc.h \
+ ../libopencm3/include/libopencm3/stm32/f3/adc.h \
+ /home/aghosh01/TARS_codebase/flight_software/include/robot_config/robot_config.h \
  /home/aghosh01/TARS_codebase/flight_software/include/interrupts/interrupts.h \
  /home/aghosh01/TARS_codebase/flight_software/include/timekeeping/mission_timekeeper.h \
  /home/aghosh01/TARS_codebase/flight_software/include/imu/imu.h \
  /home/aghosh01/TARS_codebase/flight_software/include/vehicle_firmware_hal/imu_hal.h \
- /home/aghosh01/TARS_codebase/flight_software/include/pwm_input/pwm_input.h \
- /home/aghosh01/TARS_codebase/flight_software/include/vehicle_firmware_hal/pwm_input_hal.h \
  /home/aghosh01/TARS_codebase/flight_software/include/vehicle_pwm/QuadRotor_PWM.h \
  /home/aghosh01/TARS_codebase/flight_software/include/vehicle_firmware_hal/QuadRotor_PWM_hal.h \
- /home/aghosh01/TARS_codebase/flight_software/include/comp_filter/comp_filter.h \
- /home/aghosh01/TARS_codebase/flight_software/include/controller/pid_controller.h \
- /home/aghosh01/TARS_codebase/flight_software/include/lidar_lite_v1/lidar_lite_v1.h \
- /home/aghosh01/TARS_codebase/flight_software/include/vehicle_firmware_hal/lidar_lite_v1_hal.h
+ /home/aghosh01/TARS_codebase/flight_software/include/rpi_comms/rpi_comms.h

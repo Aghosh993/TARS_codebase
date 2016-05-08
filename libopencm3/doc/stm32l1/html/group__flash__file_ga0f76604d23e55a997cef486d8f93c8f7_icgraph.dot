@@ -1,0 +1,13 @@
+digraph "flash_prefetch_enable"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="flash_prefetch_enable",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="rcc_clock_setup_hsi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__defines.html#ga3d30e886f8749e059865bd3fc7a14ccd"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="rcc_clock_setup_msi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__defines.html#ga71d9ff219cb4e09c3cddbf383e8c47b3"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="rcc_clock_setup_pll",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__defines.html#ga76b12063e828a7af960d375dee952d31"];
+}

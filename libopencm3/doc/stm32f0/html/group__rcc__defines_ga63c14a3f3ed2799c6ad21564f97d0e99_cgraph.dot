@@ -1,0 +1,21 @@
+digraph "rcc_clock_setup_in_hsi_out_24mhz"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="rcc_clock_setup_in\l_hsi_out_24mhz",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="flash_set_ws",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__flash__defines.html#ga9347b16d27d64b79f507dc9cad8633b2",tooltip="Set the Number of Wait States. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="rcc_osc_on",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__STM32F0xx-rcc-file.html#ga81b16ade2e5d6e024f36e3d568a9fd97",tooltip="RCC Turn on an Oscillator. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="rcc_set_hpre",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__STM32F0xx-rcc-file.html#gae192b2cd0f37124db5ed76d599a5671b",tooltip="RCC Set the AHB Prescale Factor. "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="rcc_set_pll_multiplication\l_factor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__STM32F0xx-rcc-file.html#ga93f0715a42904d8c70bc7d1c862cf89f",tooltip="RCC Set the PLL Multiplication Factor. "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="rcc_set_ppre",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__STM32F0xx-rcc-file.html#ga05a5e2fab5bb6e8de484b83588a29bee",tooltip="RCC Set the APB Prescale Factor. "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="rcc_set_sysclk_source",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__STM32F0xx-rcc-file.html#ga0ce4f6c68587faf17a38d98fdcdab338",tooltip="RCC Set the Source for the System Clock. "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="rcc_wait_for_osc_ready",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__STM32F0xx-rcc-file.html#ga1dfd0e0ba16285ce16e782e07af2cafa",tooltip="RCC Wait for Oscillator Ready. "];
+}

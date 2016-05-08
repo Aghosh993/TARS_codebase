@@ -2,8 +2,7 @@
 
 #include <stdint.h>
 #include <mission_timekeeper.h>
-
-#include <pwm_input_hal.h>
+#include <rpi_comms.h>
 
 /*
 At the moment, libopencm3 appears not to have macros/functions
@@ -66,25 +65,52 @@ void sys_tick_handler(void)
 {
 	flag_scheduler_callback();
 	update_mission_time_counter();
-	rc_input_watchdog_callback();
+	// rc_input_watchdog_callback();
 }
 
-void tim2_isr(void)
+// void tim2_isr(void)
+// {
+// 	timer2_isr_callback();
+// }
+
+// void tim3_isr(void)
+// {
+// 	timer3_isr_callback();
+// }
+
+// void tim4_isr(void)
+// {
+// 	timer4_isr_callback();
+// }
+
+// void tim8_cc_isr(void)
+// {
+// 	timer8_isr_callback();
+// }
+
+/*
+	Debug port ISR:
+ */
+void usart1_exti25_isr(void)
 {
-	timer2_isr_callback();
+	char c;
+	if(usart_get_interrupt_source(USART1, USART_ISR_RXNE))
+	{
+		c = (char)usart_recv_blocking(USART1);
+		// usart_send_blocking(USART2, c);
+	}
 }
 
-void tim3_isr(void)
+/*
+	Raspberry Pi port ISR:
+ */
+void usart2_exti26_isr(void)
 {
-	timer3_isr_callback();
-}
-
-void tim4_isr(void)
-{
-	timer4_isr_callback();
-}
-
-void tim8_cc_isr(void)
-{
-	timer8_isr_callback();
+	char c;
+	if(usart_get_interrupt_source(USART2, USART_ISR_RXNE))
+	{
+		c = (char)usart_recv_blocking(USART2);
+		// usart_send_blocking(USART1, c);
+		process_incoming_data(c);
+	}
 }

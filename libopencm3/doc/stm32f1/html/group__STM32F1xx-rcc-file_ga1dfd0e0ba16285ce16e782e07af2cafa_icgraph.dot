@@ -1,0 +1,23 @@
+digraph "rcc_wait_for_osc_ready"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="rcc_wait_for_osc_ready",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="rcc_clock_setup_in\l_hse_12mhz_out_72mhz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__STM32F1xx-rcc-file.html#gae6012c8bf33f8cfa406a37ef88e9a47b",tooltip="RCC Set System Clock PLL at 24MHz from HSE at 12MHz. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="rcc_clock_setup_in\l_hse_16mhz_out_72mhz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__STM32F1xx-rcc-file.html#gaec148e144431957a5a0dff4d3ce581b1",tooltip="RCC Set System Clock PLL at 24MHz from HSE at 16MHz. "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="rcc_clock_setup_in\l_hse_25mhz_out_72mhz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__STM32F1xx-rcc-file.html#gae61f5759a5cbcd628e873e951ade7f1b",tooltip="RCC Set System Clock PLL at 72MHz from HSE at 25MHz. "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="rcc_clock_setup_in\l_hse_8mhz_out_24mhz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__STM32F1xx-rcc-file.html#ga2a1d0a3e6272c2268ed5b560fb37262c",tooltip="RCC Set System Clock PLL at 24MHz from HSE at 8MHz. "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="rcc_clock_setup_in\l_hse_8mhz_out_72mhz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__STM32F1xx-rcc-file.html#ga7de5e411afdd8f22d01d91613acfc844",tooltip="RCC Set System Clock PLL at 72MHz from HSE at 8MHz. "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="rcc_clock_setup_in\l_hsi_out_24mhz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__STM32F1xx-rcc-file.html#ga63c14a3f3ed2799c6ad21564f97d0e99",tooltip="RCC Set System Clock PLL at 24MHz from HSI. "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="rcc_clock_setup_in\l_hsi_out_48mhz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__STM32F1xx-rcc-file.html#gadd6354a9a1404b23b5baa00b51b03cc2",tooltip="RCC Set System Clock PLL at 48MHz from HSI. "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="rcc_clock_setup_in\l_hsi_out_64mhz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__STM32F1xx-rcc-file.html#gae75d09f5953c113b10c266937e0d36a7",tooltip="RCC Set System Clock PLL at 64MHz from HSI. "];
+}

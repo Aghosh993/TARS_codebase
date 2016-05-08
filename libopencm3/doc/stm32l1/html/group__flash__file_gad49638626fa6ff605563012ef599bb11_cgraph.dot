@@ -1,0 +1,13 @@
+digraph "flash_erase_sector"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="flash_erase_sector",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="flash_set_program_size",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__flash__file.html#gabe30bb2a8f268a494d3600c0dfc5406d",tooltip="Set the Program Parallelism Size. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="flash_wait_for_last\l_operation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__flash__defines.html#ga72ce389bb20296771479ace8cdb62dff",tooltip="Wait until Last Operation has Ended. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="flash_get_status_flags",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__flash__defines.html#ga5afd52a33a55a6423d536eca1f04933b"];
+}

@@ -10,5 +10,6 @@
 #include <libopencm3/stm32/usart.h>
 #include <libopencm3/stm32/i2c.h>
 #include <libopencm3/stm32/spi.h>
+#include <libopencm3/stm32/adc.h>
 
 #endif

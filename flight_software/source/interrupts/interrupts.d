@@ -36,6 +36,8 @@
  ../libopencm3/include/libopencm3/stm32/f3/spi.h \
  ../libopencm3/include/libopencm3/stm32/common/spi_common_f03.h \
  ../libopencm3/include/libopencm3/stm32/common/spi_common_all.h \
+ ../libopencm3/include/libopencm3/stm32/adc.h \
+ ../libopencm3/include/libopencm3/stm32/f3/adc.h \
  /home/aghosh01/TARS_codebase/flight_software/include/timekeeping/mission_timekeeper.h \
  /home/aghosh01/gcc-arm-none-eabi-4_7-2012q4/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/include/stdlib.h \
  /home/aghosh01/gcc-arm-none-eabi-4_7-2012q4/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/include/machine/ieeefp.h \
@@ -52,4 +54,4 @@
  /home/aghosh01/gcc-arm-none-eabi-4_7-2012q4/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/include/sys/lock.h \
  /home/aghosh01/gcc-arm-none-eabi-4_7-2012q4/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/include/machine/stdlib.h \
  /home/aghosh01/gcc-arm-none-eabi-4_7-2012q4/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/include/alloca.h \
- /home/aghosh01/TARS_codebase/flight_software/include/vehicle_firmware_hal/pwm_input_hal.h
+ /home/aghosh01/TARS_codebase/flight_software/include/rpi_comms/rpi_comms.h

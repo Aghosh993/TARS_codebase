@@ -1,0 +1,45 @@
+digraph "LPC43xx Defines"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node7 [label="Global Input Multiplexer\l Array Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gima__defines.html",tooltip="Defined Constants and Types for the LPC43xx Global Input Multiplexer Array "];
+  Node0 [label="LPC43xx Defines",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 [label="Alarm Timer Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__atimer__defines.html",tooltip="Defined Constants and Types for the LPC43xx Alarm Timer "];
+  Node17 [label="Synchronous Serial Port",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__ssp__defines.html",tooltip="Defined Constants and Types for the LPC43xx Synchronous Serial Port "];
+  Node12 [label="Reset Generation Unit\l Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rgu__defines.html",tooltip="Defined Constants and Types for the LPC43xx Reset Generation Unit "];
+  Node4 [label="Clock Generation Unit\l Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__cgu__defines.html",tooltip="Defined Constants and Types for the LPC43xx Clock Generation Unit "];
+  Node14 [label="System Control Unit\l Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__scu__defines.html",tooltip="Defined Constants and Types for the LPC43xx System Control Unit "];
+  Node11 [label="I2S Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__i2s__defines.html",tooltip="Defined Constants and Types for the LPC43xx I2S "];
+  Node19 [label="Windowed Watchdog Timer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__wwdt__defines.html",tooltip="Defined Constants and Types for the LPC43xx Windowed Watchdog Timer "];
+  Node10 [label="I2C Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__i2c__defines.html",tooltip="Defined Constants and Types for the LPC43xx I2C "];
+  Node13 [label="Repetitive Interrupt\l Timer Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__ritimer__defines.html",tooltip="Defined Constants and Types for the LPC43xx Repetitive Interrupt Timer "];
+  Node5 [label="Configuration Registers\l Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__creg__defines.html",tooltip="Defined Constants and Types for the LPC43xx Configuration Registers "];
+  Node8 [label="General Purpose DMA\l Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gpdma__defines.html",tooltip="Defined Constants and Types for the LPC43xx General Purpose DMA "];
+  Node3 [label="Clock Control Unit\l Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__ccu__defines.html",tooltip="Defined Constants and Types for the LPC43xx Clock Control Unit "];
+  Node16 [label="Serial General Purpose I/O",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__sgpio__defines.html",tooltip="Defined Constants and Types for the LPC43xx Serial General Purpose I/O "];
+  Node9 [label="General Purpose I/O\l Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gpio__defines.html",tooltip="Defined Constants and Types for the LPC43xx General Purpose I/O "];
+  Node6 [label="Event Router Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__eventrouter__defines.html",tooltip="Defined Constants and Types for the LPC43xx Event Router "];
+  Node18 [label="Timer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__timer__defines.html",tooltip="Defined Constants and Types for the LPC43xx timer "];
+  Node15 [label="SDIO",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__sdio__defines.html",tooltip="Defined Constants and Types for the LPC43xx SDIO "];
+  Node1 [label="ADC Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__defines.html",tooltip="Defined Constants and Types for the LPC43xx A/D Converter "];
+  Node0->Node1 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node5 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node6 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node7 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node8 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node9 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node10 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node11 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node12 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node13 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node14 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node15 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node16 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node17 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node18 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node19 [shape=plaintext, dir="back", style="solid"];
+}

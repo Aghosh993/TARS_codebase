@@ -1,0 +1,8 @@
+var searchData=
+[
+  ['scu_5fpinmux',['scu_pinmux',['../group__scu__defines.html#ga10fed4eae1d8270ecaee5f3b9b3b3394',1,'scu_pinmux(scu_grp_pin_t group_pin, uint32_t scu_conf):&#160;scu.c'],['../group__scu__file.html#ga10fed4eae1d8270ecaee5f3b9b3b3394',1,'scu_pinmux(scu_grp_pin_t group_pin, uint32_t scu_conf):&#160;scu.c']]],
+  ['ssp_5fdisable',['ssp_disable',['../group__ssp__defines.html#ga741020e6b94479e80107e428d552e5c3',1,'ssp_disable(ssp_num_t ssp_num):&#160;ssp.c'],['../group__ssp__file.html#ga741020e6b94479e80107e428d552e5c3',1,'ssp_disable(ssp_num_t ssp_num):&#160;ssp.c']]],
+  ['ssp_5finit',['ssp_init',['../group__ssp__defines.html#gabf3b154339113853936a35f87ea2f1f9',1,'ssp_init(ssp_num_t ssp_num, ssp_datasize_t data_size, ssp_frame_format_t frame_format, ssp_cpol_cpha_t cpol_cpha_format, uint8_t serial_clock_rate, uint8_t clk_prescale, ssp_mode_t mode, ssp_master_slave_t master_slave, ssp_slave_option_t slave_option):&#160;ssp.c'],['../group__ssp__file.html#gabf3b154339113853936a35f87ea2f1f9',1,'ssp_init(ssp_num_t ssp_num, ssp_datasize_t data_size, ssp_frame_format_t frame_format, ssp_cpol_cpha_t cpol_cpha_format, uint8_t serial_clock_rate, uint8_t clk_prescale, ssp_mode_t mode, ssp_master_slave_t master_slave, ssp_slave_option_t slave_option):&#160;ssp.c']]],
+  ['ssp_5ftransfer',['ssp_transfer',['../group__ssp__defines.html#ga97a6e5b0c36d4f4c066bf837799245a9',1,'ssp_transfer(ssp_num_t ssp_num, uint16_t data):&#160;ssp.c'],['../group__ssp__file.html#ga97a6e5b0c36d4f4c066bf837799245a9',1,'ssp_transfer(ssp_num_t ssp_num, uint16_t data):&#160;ssp.c']]],
+  ['ssp_5fwait_5funtil_5fnot_5fbusy',['ssp_wait_until_not_busy',['../group__ssp__file.html#ga82ac18ac210f631c6807fceeda4b9679',1,'ssp.c']]]
+];

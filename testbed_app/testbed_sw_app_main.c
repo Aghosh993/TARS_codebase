@@ -33,6 +33,7 @@
  */
 
 #include <hal_common_includes.h>
+#include <robot_config.h>
 
 /*
 	Avionics software-specific includes:
@@ -41,11 +42,8 @@
 #include <interrupts.h>
 #include <mission_timekeeper.h>
 #include <imu.h>
-#include <pwm_input.h>
 #include <QuadRotor_PWM.h>
-#include <comp_filter.h>
-#include <pid_controller.h>
-#include <lidar_lite_v1.h>
+#include <rpi_comms.h>
 
 /*
 	Shamelessly stolen from I2C example in libopencm3-examples,
@@ -66,16 +64,11 @@
 /*
 	Summary of hardware pin usage:
 
-	PA2,3 			-> 			USART2
-	PE8,9,10,11,12,13,14,15 -> 	LEDs
-	PB6,7 			-> 			I2C
-	PA5,6,7 		-> 			SPI1 MISO,MOSI,CLK
-	PE3 			-> 			SPI1 CS (user-controlled) for L3GD20
-	PD3 			-> 			Timer2 Input capture
-	PC6 			-> 			Timer3 Input capture
-	PD12 			-> 			Timer4 Input capture
-	PA15 			->			Timer8 Input capture
-	PA8,9,10,PE14 	-> 			Timer1 PWM Output
+	PA9,10 			->			USART1, DEBUG
+	PA2,3 			-> 			USART2, Raspberry Pi
+	PE9,11,13,14 	-> 			Timer1 PWM Output
+	PC6,7,PD6,7 	-> 			Timer3 PWM Output
+	PD2 			-> 			Servo Power enable
  */
 
 /*
@@ -91,6 +84,7 @@
 static void set_system_clock(void)
 {
 	rcc_clock_setup_hsi(&hsi_8mhz[CLOCK_64MHZ]);
+	// rcc_clock_setup_hsi(&rcc_hsi_8mhz[RCC_CLOCK_64MHZ]);
 }
 
 void setup_led_pins(void)
@@ -100,13 +94,40 @@ void setup_led_pins(void)
 	gpio_set(GPIOE, GPIO8 | GPIO9 | GPIO10 | GPIO11);
 }
 
-static void usart_setup(void)
+void usart1_setup(void)
+{
+	/* Enable clocks for GPIO port A (for GPIO_USART1_TX) and USART1. */
+	rcc_periph_clock_enable(RCC_USART1);
+	rcc_periph_clock_enable(RCC_GPIOA);
+
+	/* Setup GPIO pin GPIO_USART1_TX/GPIO9 on GPIO port A for transmit. */
+	gpio_mode_setup(GPIOA, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO9 | GPIO10);
+	gpio_set_af(GPIOA, GPIO_AF7, GPIO9 | GPIO10);
+
+	/* Setup UART parameters. */
+	usart_set_baudrate(USART1, 115200);
+	usart_set_databits(USART1, 8);
+	usart_set_stopbits(USART1, USART_STOPBITS_1);
+	usart_set_mode(USART1, USART_MODE_TX_RX);
+	usart_set_parity(USART1, USART_PARITY_NONE);
+	usart_set_flow_control(USART1, USART_FLOWCONTROL_NONE);
+
+	// Unmask receive interrupt
+	usart_enable_rx_interrupt(USART1);
+	// Make sure the interrupt is routed through the NVIC
+	nvic_enable_irq(NVIC_USART1_EXTI25_IRQ);
+
+	/* Finally enable the USART. */
+	usart_enable(USART1);
+}
+
+void usart2_setup(void)
 {
 	/* Enable clocks for GPIO port A (for GPIO_USART2_TX) and USART2. */
 	rcc_periph_clock_enable(RCC_USART2);
 	rcc_periph_clock_enable(RCC_GPIOA);
 
-	/* Setup GPIO pin GPIO_USART2_TX/GPIO9 on GPIO port A for transmit. */
+	/* Setup GPIO pin GPIO_USART2_TX/GPIO2 on GPIO port A for transmit. */
 	gpio_mode_setup(GPIOA, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO2 | GPIO3);
 	gpio_set_af(GPIOA, GPIO_AF7, GPIO2 | GPIO3);
 
@@ -117,15 +138,26 @@ static void usart_setup(void)
 	usart_set_mode(USART2, USART_MODE_TX_RX);
 	usart_set_parity(USART2, USART_PARITY_NONE);
 	usart_set_flow_control(USART2, USART_FLOWCONTROL_NONE);
+	
+	// Unmask receive interrupt
+	usart_enable_rx_interrupt(USART2);
+	// Make sure the interrupt is routed through the NVIC
+	nvic_enable_irq(NVIC_USART2_EXTI26_IRQ);
 
 	/* Finally enable the USART. */
 	usart_enable(USART2);
 }
 
+static void usart_setup(void)
+{
+	usart1_setup();
+	usart2_setup();
+}
+
 static void init_user_button(void)
 {
-	rcc_periph_clock_enable(RCC_GPIOA);
-	gpio_mode_setup(GPIOA, GPIO_MODE_INPUT, GPIO_PUPD_NONE, GPIO0);
+	rcc_periph_clock_enable(RCC_GPIOD);
+	gpio_mode_setup(GPIOD, GPIO_MODE_INPUT, GPIO_PUPD_PULLDOWN, GPIO15);
 }
 
 #ifdef INCLUDE_PWM_TEST_SHELL
@@ -300,9 +332,12 @@ int set_angle(int joint, float angle)
 #define BASIC_GAIT			1
 // #define EXPERIMENTAL_GAIT_1	1
 
-void simple_fwd_gait(void)
+/* 
+	rt is a floating-point argument from -25.0f to 25.0f that allows the vehicle to
+    steer while it walks forward:
+ */
+void simple_fwd_gait(float rt)
 {
-	float rt = -25.0f;
 	float m1_fwd_max = 175;
 	float m1_fwd_min = 57+rt;
 
@@ -314,28 +349,6 @@ void simple_fwd_gait(void)
 
 	float m3_fwd_max = 145;
 	float m3_fwd_min = 70;
-
-	// set_angle(1, 180);
-	// set_angle(2, 90);
-	// set_angle(3, 90);
-	// set_angle(4, 90);
-	// set_angle(5, 90);
-	// set_angle(6, 90);
-	// set_angle(7, 90);
-	// set_angle(8, 90);
-	// while(1);
-
-	// float m1_fwd_max = 175;
-	// float m1_fwd_min = 60;
-
-	// float m4_fwd_max = 95;
-	// float m4_fwd_min = 0;
-
-	// float m2_fwd_max = 60;//80;
-	// float m2_fwd_min = 15;//5;
-
-	// float m3_fwd_max = 145;//120;
-	// float m3_fwd_min = 70;//95;
 
 	uint16_t speed_inv = 1U;
 
@@ -372,88 +385,165 @@ void simple_fwd_gait(void)
 		set_angle(3, m3_fwd_min);
 		timekeeper_delay(15U);
 		set_angle(8, 50.0f);
-
-		// set_angle(6, 10.0f);
-		// timekeeper_delay(150U);
-		// set_angle(2, m2_fwd_max);
-		// timekeeper_delay(150U);
-		// set_angle(1, m1_fwd_max);
-		// set_angle(6, 50.0f);
-
-		// set_angle(7, 5.0f);
-		// timekeeper_delay(150U);
-		// set_angle(3, m3_fwd_max);
-		// timekeeper_delay(150U);
-		// set_angle(4, m4_fwd_max);
-		// set_angle(7, 50.0f);
-		// timekeeper_delay(150U);
-		
-		// set_angle(5, 5.0f);
-		// timekeeper_delay(175U);
-		// set_angle(1, m1_fwd_min);
-		// timekeeper_delay(150U);
-		// set_angle(2, m2_fwd_min);
-		// set_angle(5, 50.0f);
-
-		// set_angle(8, 5.0f);
-		// timekeeper_delay(150U);
-		// set_angle(4, m4_fwd_min);
-		// timekeeper_delay(150U);
-		// set_angle(3, m3_fwd_min);
-		// set_angle(8, 50.0f);
 	#endif
 
-	#ifdef EXPERIMENTAL_GAIT_1
-		/*Move front left leg up, forward and back down*/
-		set_angle(5, 5.0f);
-		timekeeper_delay(150U*speed_inv);
-		set_angle(1, 100.0f);
-		timekeeper_delay(150U*speed_inv);
-		set_angle(5, 70.0f);
+	// #ifdef EXPERIMENTAL_GAIT_1
+	// 	/*Move front left leg up, forward and back down*/
+	// 	set_angle(5, 5.0f);
+	// 	timekeeper_delay(150U*speed_inv);
+	// 	set_angle(1, 100.0f);
+	// 	timekeeper_delay(150U*speed_inv);
+	// 	set_angle(5, 70.0f);
 
-		/*Wait a short time*/
-		timekeeper_delay(50U*speed_inv);
+	// 	/*Wait a short time*/
+	// 	timekeeper_delay(50U*speed_inv);
 
-		/*Move rear left leg up, forward and back down*/
-		set_angle(8, 5.0f);
-		timekeeper_delay(150U*speed_inv);
-		set_angle(4, 10.0f);
-		timekeeper_delay(200U*speed_inv);
-		set_angle(8, 50.0f);
+	// 	/*Move rear left leg up, forward and back down*/
+	// 	set_angle(8, 5.0f);
+	// 	timekeeper_delay(150U*speed_inv);
+	// 	set_angle(4, 10.0f);
+	// 	timekeeper_delay(200U*speed_inv);
+	// 	set_angle(8, 50.0f);
 
-		/*Wait a short time*/
-		timekeeper_delay(50U*speed_inv);
+	// 	/*Wait a short time*/
+	// 	timekeeper_delay(50U*speed_inv);
 
-		/*Move front and rear legs both backward to "push" that side forward*/
-		set_angle(1, 170.0f);
-		set_angle(4, 50.0f);
-		timekeeper_delay(150U*speed_inv);
+	// 	/*Move front and rear legs both backward to "push" that side forward*/
+	// 	set_angle(1, 170.0f);
+	// 	set_angle(4, 50.0f);
+	// 	timekeeper_delay(150U*speed_inv);
 
-		/*Move rear right leg up, forward and back down*/
-		set_angle(7, 5.0f);
-		timekeeper_delay(150U*speed_inv);
-		set_angle(3, 160.0f);
-		timekeeper_delay(150U*speed_inv);
-		set_angle(7, 50.0f);
+	// 	/*Move rear right leg up, forward and back down*/
+	// 	set_angle(7, 5.0f);
+	// 	timekeeper_delay(150U*speed_inv);
+	// 	set_angle(3, 160.0f);
+	// 	timekeeper_delay(150U*speed_inv);
+	// 	set_angle(7, 50.0f);
 
-		/*Wait a short time*/
-		timekeeper_delay(50U*speed_inv);
+	// 	/*Wait a short time*/
+	// 	timekeeper_delay(50U*speed_inv);
 
-		/*Move front right leg up, forward and back down*/
-		set_angle(6, 5.0f);
-		timekeeper_delay(150U*speed_inv);
-		set_angle(2, 100.0f);
-		timekeeper_delay(180U*speed_inv);
-		set_angle(6, 50.0f);
+	// 	/*Move front right leg up, forward and back down*/
+	// 	set_angle(6, 5.0f);
+	// 	timekeeper_delay(150U*speed_inv);
+	// 	set_angle(2, 100.0f);
+	// 	timekeeper_delay(180U*speed_inv);
+	// 	set_angle(6, 50.0f);
 
-		/*Wait a short time*/
-		timekeeper_delay(50U*speed_inv);
+	// 	/*Wait a short time*/
+	// 	timekeeper_delay(50U*speed_inv);
 
-		/*Move front and rear legs both backward to "push" that side forward*/
-		set_angle(2, 10.0f);
-		set_angle(3, 80.0f);
-		timekeeper_delay(150U*speed_inv);
-	#endif
+	// 	/*Move front and rear legs both backward to "push" that side forward*/
+	// 	set_angle(2, 10.0f);
+	// 	set_angle(3, 80.0f);
+	// 	timekeeper_delay(150U*speed_inv);
+	// #endif
+}
+
+#ifdef HIGHSIDE_SWITCHES_USE_PWM
+	static void set_m1_highside_switch(float value)
+	{
+		uint32_t duty = (uint32_t)((float)64000 * value);
+		timer_set_oc_value(TIM2, TIM_OC3, duty);
+	}
+
+	static void set_m2_highside_switch(float value)
+	{
+		uint32_t duty = (uint32_t)((float)64000 * value);
+		timer_set_oc_value(TIM2, TIM_OC4, duty);
+	}
+#endif
+
+#ifndef HIGHSIDE_SWITCHES_USE_PWM
+	static void setup_highside_switches(void)
+	{
+		// Set up high-side switch control channels as GPIOs
+		gpio_mode_setup(GPIOD, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, GPIO6 | GPIO7);
+		// Initialize the outputs to logic LOW to inhibit both channels:
+		gpio_clear(GPIOD, GPIO6 | GPIO7);
+	}
+	static void set_m1_highside_switch(int value)
+	{
+		if(value>0)
+		{
+			gpio_set(GPIOD, GPIO6);
+		}
+		else
+		{
+			gpio_clear(GPIOD, GPIO6);
+		}
+	}
+
+	static void set_m2_highside_switch(int value)
+	{
+		if(value>0)
+		{
+			gpio_set(GPIOD, GPIO7);
+		}
+		else
+		{
+			gpio_clear(GPIOD, GPIO7);
+		}
+	}
+#endif
+
+static void setup_servo_enable_outut(void)
+{
+	rcc_periph_clock_enable(RCC_GPIOD);
+	gpio_mode_setup(GPIOD, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, GPIO2);
+	gpio_clear(GPIOD, GPIO2);
+}
+
+static void enable_servo_bus(void)
+{
+	gpio_set(GPIOD, GPIO2);
+}
+
+static void disable_servo_bus(void)
+{
+	gpio_clear(GPIOD, GPIO2);
+}
+
+static void rpi_send_buffer(int len, uint8_t *buffer)
+{
+	int i = 0;
+	for(i=0; i<len; ++i)
+	{
+		usart_send_blocking(USART2, buffer[i]);
+	}
+}
+
+static void init_adc_input(void)
+{
+	//ADC
+	rcc_periph_clock_enable(RCC_ADC34);
+	rcc_periph_clock_enable(RCC_GPIOB);
+	//ADC
+	gpio_mode_setup(GPIOB, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, GPIO1);
+	adc_off(ADC3);
+	RCC_CFGR2 |= (uint32_t)0x10003400;
+	adc_set_clk_prescale(ADC_CCR_CKMODE_DIV4);
+	adc_set_single_conversion_mode(ADC3);
+	adc_disable_external_trigger_regular(ADC3);
+	adc_set_right_aligned(ADC3);
+
+	adc_set_sample_time_on_all_channels(ADC3, ADC_SMPR1_SMP_1DOT5CYC);
+	adc_set_resolution(ADC3, ADC_CFGR_RES_12_BIT);
+	adc_power_on(ADC3);
+
+	/* Wait for ADC starting up. */
+	int i;
+	for (i = 0; i < 800000; i++)
+		__asm__("nop");
+
+	uint8_t channel_array[16];
+	int j = 0;
+	for(j=0; j<16; ++j)
+	{
+		channel_array[j]=1;	
+	}
+	
+	adc_set_regular_sequence(ADC3, 1, channel_array);
 }
 
 #define MOTOR1 	0
@@ -469,11 +559,6 @@ int main(void)
 {
 	_disable_interrupts();
 
-		imu_scaled_data_struct imu_struct_scaled;
-		imu_raw_data_struct imu_struct_raw;
-
-		rc_joystick_data_struct js;
-
 		set_system_clock();
 		setup_led_pins();
 		systick_setup();
@@ -484,7 +569,7 @@ int main(void)
 		setvbuf(stdout,NULL,_IONBF,0); 	// Sets stdin in unbuffered mode (normal for usart com)
 
 		init_mission_timekeeper();
-		initialize_imu(SCALE_2G, SCALE_1POINT9_GAUSS, SCALE_250_DPS, &imu_struct_scaled);
+		init_pi_comms();
 		
 	_enable_interrupts();
 
@@ -521,37 +606,31 @@ int main(void)
 	QuadRotor_motor7_start();
 	QuadRotor_motor8_start();
 
-	printf("Ready\r\n");
-
 	QuadRotor_motor1_setDuty(0.5f);
 	QuadRotor_motor2_setDuty(0.5f);
 	QuadRotor_motor3_setDuty(0.5f);
 	QuadRotor_motor4_setDuty(0.5f);
 
-	// uint8_t user_output_flag = create_flag(10U);
+	// float corrected_gyro_data[3];
 
-	float corrected_gyro_data[3];
+	// float motor1_angle = 90.0f;
+	// float motor2_angle = 90.0f;
+	// float motor3_angle = 90.0f;
+	// float motor4_angle = 90.0f;
 
-	// float angle = 0.0f;
+	// float motor5_angle = 45.0f;
+	// float motor6_angle = 45.0f;
+	// float motor7_angle = 45.0f;
+	// float motor8_angle = 45.0f;
 
-	float motor1_angle = 90.0f;
-	float motor2_angle = 90.0f;
-	float motor3_angle = 90.0f;
-	float motor4_angle = 90.0f;
-
-	float motor5_angle = 45.0f;
-	float motor6_angle = 45.0f;
-	float motor7_angle = 45.0f;
-	float motor8_angle = 45.0f;
-
-	float motor1_angle_offset = 0.0f;
-	float motor2_angle_offset = 0.0f;
-	float motor3_angle_offset = 0.0f;
-	float motor4_angle_offset = 0.0f;
-	float motor5_angle_offset = 0.8f;
-	float motor6_angle_offset = 0.4f;
-	float motor7_angle_offset = 0.8f;
-	float motor8_angle_offset = 0.4f;
+	// float motor1_angle_offset = 0.0f;
+	// float motor2_angle_offset = 0.0f;
+	// float motor3_angle_offset = 0.0f;
+	// float motor4_angle_offset = 0.0f;
+	// float motor5_angle_offset = 0.8f;
+	// float motor6_angle_offset = 0.4f;
+	// float motor7_angle_offset = 0.8f;
+	// float motor8_angle_offset = 0.4f;
 
 	set_angle(1, 135.0f);
 	set_angle(2, 45.0f);
@@ -565,91 +644,74 @@ int main(void)
 
 	float angle = 0.0f;
 
-	// Wait for user start:
-	while(!gpio_get(GPIOA, GPIO0));
+	/*
+		Enable highside switches as logic channels:
+	 */
+	#ifndef HIGHSIDE_SWITCHES_USE_PWM
+		setup_highside_switches();
+	#endif
+
+	/*
+		Enable 5 Volt servo power bus by setting logic output to its highside switch:
+	 */
+	setup_servo_enable_outut();
+	enable_servo_bus();
+
+	/*
+		Initialize voltage monitor ADC channels:
+	 */
+	// init_adc_input();
+
+	printf("Starting...\r\n");
+
+	float turn_amt = 55.0f;
+	int adcval = 0;
+	incoming_command_packet cmd;
+	// adc_start_conversion_regular(ADC2);
 
 	while (1)
 	{
-		simple_fwd_gait();
+		cmd = get_last_cmd_packet();
+		// simple_fwd_gait(turn_amt);
 
-		// if(get_flag_state(user_output_flag) == STATE_PENDING)
-		// {
-		// 	reset_flag(user_output_flag);
+		// Simple test of high-side switches for the DC brushed motor outputs:
+		// gpio_set(GPIOD, GPIO6 | GPIO7);
+		// timekeeper_delay(500U);
+		// gpio_clear(GPIOD, GPIO6 | GPIO7);
+		// timekeeper_delay(500U);
 
-			/* For a simple push-up and come back down cyclic demo: */
+		// Testing airsoft control channels:
+		if(gpio_get(GPIOD, GPIO15) > 0)
+		{
+			#ifdef HIGHSIDE_SWITCHES_USE_PWM
+				set_m1_highside_switch(0.80f);
+				set_m2_highside_switch(0.80f);
+			#endif
 
-			// angle = push_up_advance_state();
+			#ifndef HIGHSIDE_SWITCHES_USE_PWM
+				set_m1_highside_switch(1);
+				set_m2_highside_switch(1);
+			#endif
+		}
+		else
+		{
+			#ifdef HIGHSIDE_SWITCHES_USE_PWM
+				set_m1_highside_switch(0.00f);
+				set_m2_highside_switch(0.00f);
+			#endif
 
-			// set_angle(5, angle);
-			// set_angle(6, angle);
-			// set_angle(7, angle);
-			// set_angle(8, angle);
-
-			// motor1_angle = 135.0f + (30.0f*sin(angle+motor1_angle_offset));
-			// motor5_angle = 45.0f + (20.0f*sin(1.8f*(angle+motor5_angle_offset)));
-
-			// motor2_angle = 45.0f + (30.0f*sin(angle+motor2_angle_offset));
-			// motor6_angle = 45.0f + (20.0f*sin((1.8f*angle+motor6_angle_offset)));
-			
-			// motor3_angle = 135.0f - (30.0f*sin(angle+motor3_angle_offset));
-			// motor7_angle = 45.0f + (20.0f*sin((1.8f*angle+motor7_angle_offset)));
-			
-			// motor4_angle = 45.0f - (30.0f*sin(angle+motor4_angle_offset));
-			// motor8_angle = 45.0f + (20.0f*sin((1.8f*angle+motor8_angle_offset)));
-
-			// angle += 0.01f;
-			// if(angle > 2.0f*3.14159f)
-			// {
-			// 	angle = 0.0f;
-			// }
-
-			// set_angle(1, motor1_angle);
-			// set_angle(5, motor5_angle);
-
-			// set_angle(2, motor2_angle);
-			// set_angle(6, motor6_angle);
-			
-			// set_angle(3, motor3_angle);
-			// set_angle(7, motor7_angle);
-			
-			// set_angle(4, motor4_angle);
-			// set_angle(8, motor8_angle);
-
-
-
-		// }
+			#ifndef HIGHSIDE_SWITCHES_USE_PWM
+				set_m1_highside_switch(0);
+				set_m2_highside_switch(0);
+			#endif
+		}
+		// printf("%d\r\n", gpio_get(GPIOD, GPIO15));
+		printf("%d %d %d %d %d %d\r\n", cmd.fwd_speed, cmd.turn_amt, cmd.movement_mode, cmd.turret_pan, cmd.turret_tilt, cmd.logic_control_states);
+		// while(!adc_eoc(ADC2));
+		// adcval = adc_read_regular(ADC2);
+		// printf("%f\r\n", (float)7.045f*(float)adcval*(float)3.0f/(float)4096.0f);
+		// adc_start_conversion_regular(ADC2);
 	}
 
 	return 0;
-}
-
-int push_up_advance_state(void)
-{
-	static float angle = 0.0f;
-	static int up = 1;
-
-	if(angle > 90.0f)
-	{
-		up = 0;
-	}
-	if(angle < 0.0f)
-	{
-		up = 1;
-	}
-
-	if(up == 0)
-	{
-		angle -= 0.5f;
-	}
-	if(up == 1)
-	{
-		angle += 0.5f;
-	}
-
-	return angle;
-}
-
-void simple_walker(int* lookup_table, int* angle_commands)
-{
-
 }

@@ -1,0 +1,17 @@
+digraph "i2c_100khz_i2cclk8mhz"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="i2c_100khz_i2cclk8mhz",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="i2c_set_data_hold_time",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__i2c__file.html#ga9533ae19176b42465a0770f278e7e44f"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="i2c_set_data_setup_time",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__i2c__file.html#ga541c765b0370db02aa722fd5fa62436f"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="i2c_set_prescaler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__i2c__file.html#ga4fae312b2601ece973c3119a932040cd"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="i2c_set_scl_high_period",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__i2c__file.html#ga888962629650f4d07e7c4e7a69c978e2"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="i2c_set_scl_low_period",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__i2c__file.html#gac43847001b385bf85b67f82e29321872"];
+}

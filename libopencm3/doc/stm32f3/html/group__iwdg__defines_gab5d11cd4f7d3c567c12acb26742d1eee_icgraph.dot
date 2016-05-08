@@ -1,0 +1,9 @@
+digraph "iwdg_prescaler_busy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="iwdg_prescaler_busy",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="iwdg_set_period_ms",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__iwdg__file.html#ga9fddf4170e5fb9d3b4df309a152e27e5",tooltip="IWDG Set Period in Milliseconds. "];
+}

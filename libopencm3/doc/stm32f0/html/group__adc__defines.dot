@@ -1,0 +1,21 @@
+digraph "ADC Defines"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node7 [label="ADC Operation Modes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__api__opmode.html",tooltip="ADC Result API. "];
+  Node3 [label="ADC resolutions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__api__res.html"];
+  Node6 [label="ADC Channel Numbers",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__channel.html"];
+  Node4 [label="ADC sampling time",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__api__smptime.html"];
+  Node1 [label="STM32F0xx Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__STM32F0xx__defines.html",tooltip="Defined Constants and Types for the STM32F0xx series. "];
+  Node5 [label="ADC clock source",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__api__clksource.html"];
+  Node0 [label="ADC Defines",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 [label="ADC register base addresses",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__reg__base.html"];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node5 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node6 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node7 [shape=plaintext, dir="back", style="solid"];
+}

@@ -1,0 +1,37 @@
+digraph "Timer Defines"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node2 [label="TIM2_OR Timer 2 Option\l Register Internal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__tim2__opt__trigger__remap.html",tooltip="Trigger 1 Remap. "];
+  Node11 [label="SMS Slave mode selection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__tim__sms.html"];
+  Node9 [label="TIMx_CR2 MMS[6:4]:\l Master Mode Selection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__tim__mastermode.html"];
+  Node15 [label="TIM_BDTR_LOCK Timer\l Lock Values",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__tim__lock.html"];
+  Node12 [label="TIMx_DIER Timer DMA\l and Interrupt Enable\l Values",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__tim__irq__enable.html"];
+  Node10 [label="TS Trigger selection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__tim__ts.html"];
+  Node14 [label="TIMx_EGR Timer Event\l Generator Values",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__tim__event__gen.html"];
+  Node5 [label="TIMx_CR1 CKD[1:0] Clock\l Division Ratio",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__tim__x__cr1__cdr.html"];
+  Node13 [label="TIMx_SR Timer Status\l Register Flags",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__tim__sr__values.html"];
+  Node4 [label="Timer register base\l addresses",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__tim__reg__base.html"];
+  Node3 [label="TIM3_OR Timer 3 Option\l Register Internal Trigger\l 2 Remap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__tim3__opt__trigger__remap.html"];
+  Node6 [label="TIMx_CR1 CMS[1:0]:\l Center-aligned Mode\l Selection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__tim__x__cr1__cms.html"];
+  Node8 [label="TIMx_CR2_OIS: Force\l Output Idle State Control\l Values",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__tim__x__cr2__ois.html"];
+  Node0 [label="Timer Defines",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 [label="STM32L1xx Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__STM32L1xx__defines.html",tooltip="Defined Constants and Types for the STM32L1xx series. "];
+  Node7 [label="TIMx_CR1 DIR: Direction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__tim__x__cr1__dir.html"];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node5 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node6 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node7 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node8 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node9 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node10 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node11 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node12 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node13 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node14 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node15 [shape=plaintext, dir="back", style="solid"];
+}

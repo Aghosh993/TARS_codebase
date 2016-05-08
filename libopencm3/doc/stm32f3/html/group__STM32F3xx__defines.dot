@@ -1,0 +1,39 @@
+digraph "STM32F3xx Defines"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node11 [label="RCC Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__defines.html",tooltip="Defined Constants and Types for the STM32F3xx Reset and Clock Control "];
+  Node0 [label="STM32F3xx Defines",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node10 [label="PWR Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__pwr__defines.html",tooltip="Defined Constants and Types for the STM32F3xx Power control  "];
+  Node14 [label="SYSCFG Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__syscfg__defines.html",tooltip="Defined Constants and Types for the STM32F3xx Sysconfig. "];
+  Node2 [label="CRC Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__crc__defines.html",tooltip="Defined Constants and Types for the STM32F3xx CRC Generator  "];
+  Node3 [label="DAC Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__dac__defines.html",tooltip="Defined Constants and Types for the STM32F3xx DAC "];
+  Node8 [label="I2C Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__i2c__defines.html",tooltip="Defined Constants and Types for the STM32F3xx I2C  "];
+  Node5 [label="EXTI Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__exti__defines.html",tooltip="Defined Constants and Types for the STM32F3xx External Interrupts  "];
+  Node9 [label="IWDG Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__iwdg__defines.html",tooltip="Defined Constants and Types for the STM32F3xx Independent Watchdog Timer "];
+  Node13 [label="SPI Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__spi__defines.html",tooltip="Defined Constants and Types for the STM32F3xx SPI "];
+  Node7 [label="GPIO Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gpio__defines.html",tooltip="Defined Constants and Types for the STM32F3xx General Purpose I/O "];
+  Node15 [label="Timer Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__timer__defines.html",tooltip="Defined Constants and Types for the STM32F3xx Timers "];
+  Node1 [label="ADC Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__defines.html",tooltip="Defined Constants and Types for the STM32F37x Analog to Digital converter "];
+  Node16 [label="USART Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usart__defines.html",tooltip="Defined Constants and Types for the STM32F3xx USART "];
+  Node12 [label="RTC Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rtc__defines.html",tooltip="Defined Constants and Types for the STM32F3xx Real Time Clock  "];
+  Node4 [label="DMA Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__dma__defines.html",tooltip="Defined Constants and Types for the STM32F3xx DMA Controller "];
+  Node6 [label="FLASH Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__flash__defines.html",tooltip="Defined Constants and Types for the STM32F3xx Flash controller  "];
+  Node0->Node1 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node5 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node6 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node7 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node8 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node9 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node10 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node11 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node12 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node13 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node14 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node15 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node16 [shape=plaintext, dir="back", style="solid"];
+}

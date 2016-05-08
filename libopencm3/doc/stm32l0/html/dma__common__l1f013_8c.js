@@ -1,0 +1,28 @@
+var dma__common__l1f013_8c =
+[
+    [ "dma_channel_reset", "group__dma__file.html#gaa0e2c035b7be3a35d966b5d3f4576cd6", null ],
+    [ "dma_clear_interrupt_flags", "group__dma__file.html#gaeaa31cc700740df241897276081e0436", null ],
+    [ "dma_disable_channel", "group__dma__file.html#ga6a414141caca0417be5def3b1c8e661a", null ],
+    [ "dma_disable_half_transfer_interrupt", "group__dma__file.html#gab7a18436370c610a8834e354582eab9b", null ],
+    [ "dma_disable_memory_increment_mode", "group__dma__file.html#gabc76100441f2f26c42f2aaebd62a688b", null ],
+    [ "dma_disable_peripheral_increment_mode", "group__dma__file.html#gadd7396d77096a96a20e13e4dd5e06e1c", null ],
+    [ "dma_disable_transfer_complete_interrupt", "group__dma__file.html#gabbb9d94c0d4ec92ec62a7aebbcc7b360", null ],
+    [ "dma_disable_transfer_error_interrupt", "group__dma__file.html#ga2f2afc6e30285651e492381cdab7ca1a", null ],
+    [ "dma_enable_channel", "group__dma__file.html#ga8ceb0c8c8ce56a288bca8180d426c178", null ],
+    [ "dma_enable_circular_mode", "group__dma__file.html#gaa4e94297041e7c82695d7aff83cb0594", null ],
+    [ "dma_enable_half_transfer_interrupt", "group__dma__file.html#ga05bfe7ca609aaf686e9258b4a0245d72", null ],
+    [ "dma_enable_mem2mem_mode", "group__dma__file.html#gad831d792923d1f4934ea1502a178fde2", null ],
+    [ "dma_enable_memory_increment_mode", "group__dma__file.html#gad344152e8871f8787dbebb073f81c61e", null ],
+    [ "dma_enable_peripheral_increment_mode", "group__dma__file.html#ga598096631d9f7c7efc1d71059c3571e6", null ],
+    [ "dma_enable_transfer_complete_interrupt", "group__dma__file.html#ga1ee7b429eeb959f41c1dbd9d87312dc9", null ],
+    [ "dma_enable_transfer_error_interrupt", "group__dma__file.html#ga6be1b284bd502af608b3993abe1a9931", null ],
+    [ "dma_get_interrupt_flag", "group__dma__file.html#ga920e745c606523b2d4ed1804ca1302f9", null ],
+    [ "dma_set_memory_address", "group__dma__file.html#gae232f2f5a613459f6921774b5b4c049b", null ],
+    [ "dma_set_memory_size", "group__dma__file.html#ga6e89625484c29b630c797340e4d71d09", null ],
+    [ "dma_set_number_of_data", "group__dma__file.html#gacb3b053111727848b8fff84eee2261a7", null ],
+    [ "dma_set_peripheral_address", "group__dma__file.html#ga795dbd3370cf28a72ee3e2b7582df0cd", null ],
+    [ "dma_set_peripheral_size", "group__dma__file.html#ga5613aadc5520edf0ea058a0a2c41764c", null ],
+    [ "dma_set_priority", "group__dma__file.html#ga56496ac6963f287b8468bdaade35326d", null ],
+    [ "dma_set_read_from_memory", "group__dma__file.html#ga1446d08000d09fe53ccc60f51baee51a", null ],
+    [ "dma_set_read_from_peripheral", "group__dma__file.html#ga5e6948cc934466d0b26c6fffaecdb999", null ]
+];

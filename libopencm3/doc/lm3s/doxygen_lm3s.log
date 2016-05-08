@@ -1,0 +1,57 @@
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/gpio_8h__incl.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/gpio_8h__incl.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/gpio_8h__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/memorymap_8h__dep__incl.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/memorymap_8h__dep__incl.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/memorymap_8h__dep__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/gpio_8c__incl.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/gpio_8c__incl.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/gpio_8c__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/nvic_8h__incl.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/nvic_8h__incl.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/nvic_8h__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/group__LM3Sxx.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/group__LM3Sxx.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/group__LM3Sxx.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/gpio_8h__dep__incl.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/gpio_8h__dep__incl.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/gpio_8h__dep__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/memorymap_8h__incl.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/memorymap_8h__incl.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/memorymap_8h__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/systemcontrol_8h__incl.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/systemcontrol_8h__incl.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/systemcontrol_8h__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/group__gpio__defines.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/group__gpio__defines.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/group__gpio__defines.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/group__systemcontrol__defines.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/group__systemcontrol__defines.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/group__systemcontrol__defines.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/graph_legend.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/graph_legend.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/group__gpio__file.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/group__gpio__file.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/group__gpio__file.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/group__LM3Sxx__defines.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/group__LM3Sxx__defines.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/group__LM3Sxx__defines.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/dir_97aefd0d527b934f1d99a682da8fe6a9_dep.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/dir_97aefd0d527b934f1d99a682da8fe6a9_dep.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/dir_97aefd0d527b934f1d99a682da8fe6a9_dep.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/dir_869293064a8640c73deffbae3587a3ed_dep.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/dir_869293064a8640c73deffbae3587a3ed_dep.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/dir_869293064a8640c73deffbae3587a3ed_dep.map"'
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/gpio_8c__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/gpio_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/gpio_8h__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/memorymap_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/memorymap_8h__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/nvic_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/systemcontrol_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/group__LM3Sxx.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/group__LM3Sxx__defines.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/group__gpio__defines.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/group__systemcontrol__defines.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/group__gpio__file.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/dir_97aefd0d527b934f1d99a682da8fe6a9_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/lm3s/html/dir_869293064a8640c73deffbae3587a3ed_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.

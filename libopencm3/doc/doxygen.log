@@ -1,0 +1,2 @@
+/home/aghosh01/TARS_codebase/libopencm3/include/libopencm3/docmain.dox:17: warning: unable to resolve reference to `lgpl_license' for \ref command
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/html/graph_legend.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/html/graph_legend.png"'

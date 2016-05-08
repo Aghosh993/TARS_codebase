@@ -92,6 +92,52 @@ static void setup_timer3_pwm(void)
 	timer_enable_counter(TIM3);
 }
 
+static void setup_timer2_pwm(void)
+{
+	rcc_periph_clock_enable(RCC_GPIOD);
+	gpio_set_output_options(GPIOD, GPIO_OTYPE_PP,
+	                    GPIO_OSPEED_50MHZ, GPIO3 | GPIO4 | GPIO6 | GPIO7);
+	gpio_mode_setup(GPIOD, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO3 | GPIO4 | GPIO6 | GPIO7);
+
+	gpio_set_af(GPIOD, GPIO_AF2, GPIO3 | GPIO4 | GPIO6 | GPIO7);
+
+	timer_reset(TIM2);
+	rcc_periph_clock_enable(RCC_TIM2);
+
+	timer_continuous_mode(TIM2);
+
+	timer_set_mode(TIM2, TIM_CR1_CKD_CK_INT, TIM_CR1_CMS_EDGE,
+	           TIM_CR1_DIR_UP);
+	timer_set_oc_mode(TIM2, TIM_OC1, TIM_OCM_PWM1);
+	timer_set_oc_mode(TIM2, TIM_OC2, TIM_OCM_PWM1);
+	timer_set_oc_mode(TIM2, TIM_OC3, TIM_OCM_PWM1);
+	timer_set_oc_mode(TIM2, TIM_OC4, TIM_OCM_PWM1);
+
+	timer_set_period(TIM2, 64000);
+	timer_set_prescaler(TIM2, 19); // for 50 Hz, this needs to be 1 for 500 Hz output
+
+	timer_set_oc_value(TIM2, TIM_OC1, 0);
+	timer_set_oc_value(TIM2, TIM_OC2, 0);
+	timer_set_oc_value(TIM2, TIM_OC3, 0);
+	timer_set_oc_value(TIM2, TIM_OC4, 0);
+
+	timer_enable_preload(TIM2);
+
+	timer_set_oc_polarity_high(TIM2, TIM_OC1);
+	timer_set_oc_polarity_high(TIM2, TIM_OC2);
+	timer_set_oc_polarity_high(TIM2, TIM_OC3);
+	timer_set_oc_polarity_high(TIM2, TIM_OC4);
+	timer_enable_oc_output(TIM2, TIM_OC1);
+	timer_enable_oc_output(TIM2, TIM_OC2);
+	timer_enable_oc_output(TIM2, TIM_OC3);
+	timer_enable_oc_output(TIM2, TIM_OC4);
+	timer_enable_break_main_output(TIM2); // Required for Timer 1 and 8 PWM output to work
+
+	timer_generate_event(TIM2, TIM_EGR_UG);
+
+	timer_enable_counter(TIM2);
+}
+
 // This configures all vehicle PWM channels:
 void QuadRotor_PWM_init(void)
 {
@@ -99,6 +145,9 @@ void QuadRotor_PWM_init(void)
 		Do hardware-specific things here:
 	 */
 	setup_timer1_pwm();
+	#ifdef HIGHSIDE_SWITCHES_USE_PWM
+		setup_timer2_pwm();
+	#endif
 	setup_timer3_pwm();
 }
 

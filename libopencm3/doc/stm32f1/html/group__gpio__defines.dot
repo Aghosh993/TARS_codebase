@@ -1,0 +1,41 @@
+digraph "GPIO Defines"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node17 [label="GPIO Pin Identifiers",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gpio__pin__id.html"];
+  Node10 [label="Alternate Function\l Remap Controls for CAN 1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__afio__remap__can1.html"];
+  Node7 [label="Alternate Function\l Remap Controls for\l Connectivity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__afio__remap__cld.html",tooltip="Line Devices only. "];
+  Node1 [label="STM32F1xx Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__STM32F1xx__defines.html",tooltip="Defined Constants and Types for the STM32F1xx series. "];
+  Node4 [label="GPIO Pin Mode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gpio__mode.html"];
+  Node3 [label="GPIO Pin Configuration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gpio__cnf.html",tooltip="If mode specifies input, configuration can be. "];
+  Node2 [label="GPIO Port IDs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gpio__port__id.html"];
+  Node6 [label="EVENTOUT Pin selection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__afio__evcr__pin.html"];
+  Node16 [label="Alternate Function\l EXTI pin number",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__afio__exti.html"];
+  Node0 [label="GPIO Defines",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node15 [label="Alternate Function\l Remap Controls Secondary Set",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__afio__remap2.html"];
+  Node5 [label="EVENTOUT Port selection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__afio__evcr__port.html"];
+  Node9 [label="Alternate Function\l Remap Controls",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__afio__remap.html"];
+  Node14 [label="Alternate Function\l Remap Controls for\l USART 3",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__afio__remap__usart3.html"];
+  Node8 [label="Serial Wire JTAG disables",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__afio__swj__disable.html"];
+  Node13 [label="Alternate Function\l Remap Controls for\l Timer 1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__afio__remap__tim1.html"];
+  Node12 [label="Alternate Function\l Remap Controls for\l Timer 2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__afio__remap__tim2.html"];
+  Node11 [label="Alternate Function\l Remap Controls for\l Timer 3",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__afio__remap__tim3.html"];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node5 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node6 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node7 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node8 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node9 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node10 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node11 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node12 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node13 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node14 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node15 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node16 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node17 [shape=plaintext, dir="back", style="solid"];
+}

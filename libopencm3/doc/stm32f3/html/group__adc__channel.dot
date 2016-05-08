@@ -1,0 +1,15 @@
+digraph "ADC Channel Numbers"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node0 [label="ADC Channel Numbers",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 [label="ADC Number of channels\l in discontinuous mode.",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__cr1__discnum.html"];
+  Node4 [label="ADC Number of channels\l in discontinuous injected mode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__jsqr__jl.html"];
+  Node3 [label="ADC watchdog channel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__watchdog__channel.html"];
+  Node1 [label="ADC Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__defines.html",tooltip="Defined Constants and Types for the STM32F37x Analog to Digital converter "];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
+}

@@ -198,7 +198,7 @@ int main(int argc, char *argv[])
       read_js(&(joystick_to_data.s));
       send(mysocket, "s", 1, 0);
       send(mysocket, joystick_to_data.data_output, sizeof(joystick_struct), 0);
-      printf("%d\n", joystick_to_data.s.x_left);
+      printf("%d\n", joystick_to_data.s.button_states);
       usleep((unsigned int)10000);
    }
 

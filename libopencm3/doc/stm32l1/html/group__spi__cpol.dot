@@ -1,0 +1,9 @@
+digraph "SPI clock polarity"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="SPI Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__spi__defines.html",tooltip="Defined Constants and Types for the STM32L1xx SPI "];
+  Node0 [label="SPI clock polarity",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+}

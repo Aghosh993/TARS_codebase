@@ -1,0 +1,9 @@
+digraph "SMS Slave mode selection"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node0 [label="SMS Slave mode selection",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 [label="Timer Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__timer__defines.html",tooltip="libopencm3 Defined Constants and Types for the STM32F1xx Timers "];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+}

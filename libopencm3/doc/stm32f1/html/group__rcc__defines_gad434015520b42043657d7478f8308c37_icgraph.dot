@@ -1,0 +1,11 @@
+digraph "rcc_set_usbpre"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="rcc_set_usbpre",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="rcc_clock_setup_in\l_hse_25mhz_out_72mhz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__STM32F1xx-rcc-file.html#gae61f5759a5cbcd628e873e951ade7f1b",tooltip="RCC Set System Clock PLL at 72MHz from HSE at 25MHz. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="rcc_clock_setup_in\l_hsi_out_48mhz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__STM32F1xx-rcc-file.html#gadd6354a9a1404b23b5baa00b51b03cc2",tooltip="RCC Set System Clock PLL at 48MHz from HSI. "];
+}

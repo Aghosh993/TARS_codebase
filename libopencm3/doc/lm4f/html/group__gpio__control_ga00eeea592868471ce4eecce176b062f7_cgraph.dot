@@ -1,0 +1,15 @@
+digraph "gpio_port_write"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="gpio_port_write",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="gpio_configure_trigger",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gpio__defines.html#ga6a3a20a7f47ef2eb7c6efa9360f51fc9",tooltip="Configure the interrupt trigger on the given GPIO pins. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="gpio_disable_interrupts",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gpio__defines.html#gaa85cd2d1a8cbcfa7406e11afb15c1b6b",tooltip="Disable interrupts on specified GPIO pins. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="gpio_enable_interrupts",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gpio__defines.html#ga6647e613abe8223c2e78f773dfa279ce",tooltip="Enable interrupts on specified GPIO pins. "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="gpio_write",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gpio__control.html#ga86b48f47f23889ffed56ab86c0605865",tooltip="Set level of a Group of Pins (atomic) "];
+}

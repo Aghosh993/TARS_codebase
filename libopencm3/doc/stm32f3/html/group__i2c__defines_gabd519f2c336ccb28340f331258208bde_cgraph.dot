@@ -1,0 +1,35 @@
+digraph "read_i2c"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="read_i2c",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="i2c_busy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__i2c__file.html#gaf406728d61cee5c354624c5d33d837da"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="i2c_disable_autoend",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__i2c__file.html#ga8ee39542b8b27e6b298a44d6493546a2"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="i2c_enable_autoend",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__i2c__file.html#gaa30db58b7bec562d300b3a185bff5cee"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="i2c_get_data",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__i2c__file.html#gab0fae615ab83fcd0dac9885fd04c4731",tooltip="I2C Get Data. "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="i2c_is_start",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__i2c__file.html#ga0d52aba9de7f1620efd6ab1859bf3ad5"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="i2c_nack",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__i2c__file.html#gaf6b7805ee8321b705e45168d245ef82c"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="i2c_received_data",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__i2c__file.html#ga07c46233b09f9c5a6ef71c65c60c5677"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="i2c_send_data",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__i2c__file.html#gaad83fb76f31941e9d0e1083d8e4ea6f0",tooltip="I2C Send Data. "];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="i2c_send_start",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__i2c__file.html#ga5c21ca1eb1791661f78247cdccf82734",tooltip="I2C Send Start Condition. "];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="i2c_set_7bit_address",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__i2c__file.html#ga16796d9c15e8f462c11cb08678ef9804"];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="i2c_set_bytes_to_transfer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__i2c__file.html#ga68a6760bfcd203f922669c4f64009fb6"];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="i2c_set_read_transfer_dir",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__i2c__file.html#gaabc1f0734a62aff08f8bf50f95fde1f3"];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="i2c_set_write_transfer_dir",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__i2c__file.html#ga7188b92beaaca3762937609b51041379"];
+  Node1 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="i2c_transmit_int_status",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__i2c__file.html#gaebcf28daee8d073f657fa4ba0c536efc"];
+}

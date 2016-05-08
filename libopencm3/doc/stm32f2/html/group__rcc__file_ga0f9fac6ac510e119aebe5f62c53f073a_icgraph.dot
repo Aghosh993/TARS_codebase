@@ -1,0 +1,9 @@
+digraph "rcc_wait_for_osc_ready"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="rcc_wait_for_osc_ready",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="rcc_clock_setup_hse_3v3",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__file.html#ga85e0da920f4567f343a9b812df7a5687"];
+}

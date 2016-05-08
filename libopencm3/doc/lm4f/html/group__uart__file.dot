@@ -1,0 +1,19 @@
+digraph "UART"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node5 [label="UART DMA control",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__uart__dma.html",tooltip="Enabling Direct Memory Access transfers for the UART "];
+  Node1 [label="LM4F",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__LM4Fxx.html",tooltip="Libraries for TI Stellaris LM4F series. "];
+  Node0 [label="UART",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 [label="UART Interrupt control",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__uart__irq.html",tooltip="Configuring interrupts from the UART "];
+  Node2 [label="UART configuration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__uart__config.html",tooltip="Enabling and configuring the UART "];
+  Node3 [label="UART transmission and\l reception",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__uart__send__recv.html",tooltip="Sending and receiving data through the UART "];
+  Node6 [label="UART FIFO control",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__uart__fifo.html",tooltip="Enabling and controlling UART FIFO "];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node5 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node6 [shape=plaintext, dir="back", style="solid"];
+}

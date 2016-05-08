@@ -4,6 +4,7 @@
 #include <stdint.h>
 
 #include <hal_common_includes.h>
+#include <robot_config.h>
 
 #define MIN_DUTY 0.0f
 #define MAX_DUTY 1.0f

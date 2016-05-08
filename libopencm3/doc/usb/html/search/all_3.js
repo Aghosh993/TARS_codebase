@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['cb',['cb',['../struct__usbd__device_1_1user__control__callback.html#a55fd060a0418feea229f2b3b05e5c808',1,'_usbd_device::user_control_callback']]],
+  ['cbw',['cbw',['../structusb__msc__trans.html#af1b071cf466021ddc18cae7994c069f7',1,'usb_msc_trans::cbw()'],['../structusb__msc__trans.html#a1d117026e81d2374395c64d7bc76bd7d',1,'usb_msc_trans::cbw()']]],
+  ['cbw_5fcnt',['cbw_cnt',['../structusb__msc__trans.html#a2a19069abdeca0556cbe90c8af463fde',1,'usb_msc_trans']]],
+  ['cbwcb',['CBWCB',['../structusb__msc__cbw.html#a9b19b64641e14f1f74bc51b0af55974f',1,'usb_msc_cbw::CBWCB()'],['../usb__msc_8c.html#ac7174140836bafcce11192c288d618e7',1,'CBWCB():&#160;usb_msc.c']]],
+  ['cdc_2eh',['cdc.h',['../cdc_8h.html',1,'']]],
+  ['complete',['complete',['../struct__usbd__device_1_1usb__control__state.html#ab344b1656a1e8954d6b0a2c13050e7c0',1,'_usbd_device::usb_control_state']]],
+  ['config',['config',['../struct__usbd__device.html#ae60b7e4cb2c404b6e86fdf6bbafdb5d5',1,'_usbd_device']]],
+  ['control_5fstate',['control_state',['../struct__usbd__device.html#a4c28e71881bec82fc45d83860c874816',1,'_usbd_device']]],
+  ['csw',['csw',['../structusb__msc__trans.html#a43600580255023408f08061721826938',1,'usb_msc_trans::csw()'],['../structusb__msc__trans.html#aab66425ce97f007e56265b3c9f6835bc',1,'usb_msc_trans::csw()']]],
+  ['csw_5fsent',['csw_sent',['../structusb__msc__trans.html#a98d0d138ab010bba07b00744ec2b248a',1,'usb_msc_trans']]],
+  ['csw_5fvalid',['csw_valid',['../structusb__msc__trans.html#adbb4ba8f0aa484d37e01e98a504448d6',1,'usb_msc_trans']]],
+  ['ctrl_5fbuf',['ctrl_buf',['../struct__usbd__device.html#ac28d5ce184bf3812d6e85be62ce27ea4',1,'_usbd_device::ctrl_buf()'],['../struct__usbd__device_1_1usb__control__state.html#a261f6c057a987f0ad538ecc8ad4d49b3',1,'_usbd_device::usb_control_state::ctrl_buf()']]],
+  ['ctrl_5fbuf_5flen',['ctrl_buf_len',['../struct__usbd__device.html#a10d573425d5619bf41cf70c0e3bd298d',1,'_usbd_device']]],
+  ['ctrl_5flen',['ctrl_len',['../struct__usbd__device_1_1usb__control__state.html#ad9e2cd348bdd9ca9135cedb7679ed916',1,'_usbd_device::usb_control_state']]],
+  ['cur_5faltsetting',['cur_altsetting',['../structusb__config__descriptor_1_1usb__interface.html#a06451de61afb655e5e0fb756309248c4',1,'usb_config_descriptor::usb_interface::cur_altsetting()'],['../structusb__interface.html#aa39c5be41340ee8c3fa71b7a0f7ba240',1,'usb_interface::cur_altsetting()']]],
+  ['current_5faddress',['current_address',['../struct__usbd__device.html#acb76927d8afd9bf487d2f8f645e2ee0d',1,'_usbd_device']]],
+  ['current_5fblock',['current_block',['../structusb__msc__trans.html#a20a39235ec981a6fa29e9fc739d9b4a9',1,'usb_msc_trans']]],
+  ['current_5fconfig',['current_config',['../struct__usbd__device.html#a72a6261b52abbe62672c230967268d59',1,'_usbd_device']]]
+];

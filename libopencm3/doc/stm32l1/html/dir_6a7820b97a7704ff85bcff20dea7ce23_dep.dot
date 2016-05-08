@@ -1,0 +1,13 @@
+digraph "libopencm3" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_d44c64559bbebec7f509842c48db8b23 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="include" fontname="Helvetica", fontsize="10", URL="dir_d44c64559bbebec7f509842c48db8b23.html"]
+  subgraph clusterdir_6a7820b97a7704ff85bcff20dea7ce23 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_6a7820b97a7704ff85bcff20dea7ce23.html"];
+    dir_6a7820b97a7704ff85bcff20dea7ce23 [shape=plaintext label="libopencm3"];
+    dir_9417be1a17550340f19505b8a524537b [shape=box label="stm32" color="red" fillcolor="white" style="filled" URL="dir_9417be1a17550340f19505b8a524537b.html"];
+  }
+  }
+}

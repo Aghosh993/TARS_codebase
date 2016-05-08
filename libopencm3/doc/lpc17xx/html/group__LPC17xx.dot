@@ -1,0 +1,11 @@
+digraph "LPC17xx"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node2 [label="PWR",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__pwr-file.html",tooltip="libopencm3 LPC17xx Power Control "];
+  Node1 [label="GPIO",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gpio__file.html",tooltip="libopencm3 LPC17xx General Purpose I/O "];
+  Node0 [label="LPC17xx",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0->Node1 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+}

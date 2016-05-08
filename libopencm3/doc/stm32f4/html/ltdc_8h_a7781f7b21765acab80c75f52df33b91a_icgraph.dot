@@ -1,0 +1,9 @@
+digraph "ltdc_set_tft_sync_timings"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="ltdc_set_tft_sync_timings",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="ltdc_set_fb_line_count",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ltdc_8h.html#a5fe448ecba02f94ef1a56aa617268cbf"];
+}

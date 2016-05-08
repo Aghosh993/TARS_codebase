@@ -1,0 +1,9 @@
+digraph "stm32f103_ep_read_packet"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="stm32f103_ep_read_packet",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="usb_copy_from_pm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__f103_8c.html#a65002ec3c6d1073785ef61846bb755ec",tooltip="Copy a data buffer from packet memory. "];
+}

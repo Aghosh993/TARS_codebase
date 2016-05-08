@@ -1,0 +1,224 @@
+/home/aghosh01/TARS_codebase/libopencm3/include/libopencm3/vf6xx/gpio.h:81: warning: end of file while inside a group
+
+/home/aghosh01/TARS_codebase/libopencm3/include/libopencm3/vf6xx/iomuxc.h:257: warning: end of file while inside a group
+
+/home/aghosh01/TARS_codebase/libopencm3/include/libopencm3/vf6xx/uart.h:183: warning: end of file while inside a group
+
+/home/aghosh01/TARS_codebase/libopencm3/lib/vf6xx/iomuxc.c:5: warning: multiple use of section label 'vf6xx_gpio_api_ex' while adding section, (first occurrence: /home/aghosh01/TARS_codebase/libopencm3/lib/vf6xx/gpio.c, line 5)
+/home/aghosh01/TARS_codebase/libopencm3/lib/vf6xx/gpio.c:116: warning: argument 'gpio' of command @param is not found in the argument list of gpio_port_write(uint32_t gpioport, uint32_t data)
+/home/aghosh01/TARS_codebase/libopencm3/include/libopencm3/vf6xx/gpio.h:76: warning: The following parameters of gpio_port_write(uint32_t gpioport, uint32_t data) are not documented:
+  parameter 'data'
+/home/aghosh01/TARS_codebase/libopencm3/lib/vf6xx/iomuxc.c:44: warning: argument 'gpio' of command @param is not found in the argument list of iomuxc_mux(enum vf6xx_pad pad, uint32_t muxc)
+/home/aghosh01/TARS_codebase/libopencm3/include/libopencm3/vf6xx/iomuxc.h:252: warning: The following parameters of iomuxc_mux(enum vf6xx_pad pad, uint32_t muxc) are not documented:
+  parameter 'pad'
+  parameter 'muxc'
+/home/aghosh01/TARS_codebase/libopencm3/lib/vf6xx/uart.c:92: warning: unable to resolve reference to `uart_cr3_flowcontrol' for \ref command
+/home/aghosh01/TARS_codebase/libopencm3/lib/vf6xx/gpio.c:116: warning: argument 'gpio' of command @param is not found in the argument list of gpio_port_write(uint32_t gpioport, uint32_t data)
+/home/aghosh01/TARS_codebase/libopencm3/lib/vf6xx/gpio.c:125: warning: The following parameters of gpio_port_write(uint32_t gpioport, uint32_t data) are not documented:
+  parameter 'data'
+/home/aghosh01/TARS_codebase/libopencm3/lib/vf6xx/iomuxc.c:44: warning: argument 'gpio' of command @param is not found in the argument list of iomuxc_mux(enum vf6xx_pad pad, uint32_t muxc)
+/home/aghosh01/TARS_codebase/libopencm3/lib/vf6xx/iomuxc.c:51: warning: The following parameters of iomuxc_mux(enum vf6xx_pad pad, uint32_t muxc) are not documented:
+  parameter 'pad'
+  parameter 'muxc'
+/home/aghosh01/TARS_codebase/libopencm3/lib/vf6xx/uart.c:92: warning: unable to resolve reference to `uart_cr3_flowcontrol' for \ref command
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/ccm_8h__dep__incl.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/ccm_8h__dep__incl.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/ccm_8h__dep__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/anadig_8h__dep__incl.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/anadig_8h__dep__incl.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/anadig_8h__dep__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/gpio_8c__incl.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/gpio_8c__incl.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/gpio_8c__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/anadig_8h__incl.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/anadig_8h__incl.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/anadig_8h__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/ccm_8c__incl.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/ccm_8c__incl.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/ccm_8c__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/ccm_8h__incl.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/ccm_8h__incl.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/ccm_8h__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/iomuxc_8c__incl.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/iomuxc_8c__incl.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/iomuxc_8c__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/gpio_8h__dep__incl.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/gpio_8h__dep__incl.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/gpio_8h__dep__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/iomuxc_8h__dep__incl.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/iomuxc_8h__dep__incl.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/iomuxc_8h__dep__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/iomuxc_8h__incl.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/iomuxc_8h__incl.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/iomuxc_8h__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/gpio_8h__incl.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/gpio_8h__incl.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/gpio_8h__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/nvic_8h__incl.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/nvic_8h__incl.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/nvic_8h__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/memorymap_8h__incl.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/memorymap_8h__incl.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/memorymap_8h__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/uart_8h__dep__incl.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/uart_8h__dep__incl.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/uart_8h__dep__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/memorymap_8h__dep__incl.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/memorymap_8h__dep__incl.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/memorymap_8h__dep__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/uart_8h__incl.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/uart_8h__incl.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/uart_8h__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/uart_8c__incl.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/uart_8c__incl.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/uart_8c__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/vector__chipset_8c__incl.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/vector__chipset_8c__incl.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/vector__chipset_8c__incl.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__ccm__defines.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__ccm__defines.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__ccm__defines.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__anadig__defines.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__anadig__defines.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__anadig__defines.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__iomuxc__reg.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__iomuxc__reg.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__iomuxc__reg.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__iomuxc__defines.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__iomuxc__defines.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__iomuxc__defines.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__gpio__reg__base.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__gpio__reg__base.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__gpio__reg__base.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__defines.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__defines.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__defines.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__reg__base_ga4d307c35029294ab30d6d7df37e8e414_icgraph.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__reg__base_ga4d307c35029294ab30d6d7df37e8e414_icgraph.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__reg__base_ga4d307c35029294ab30d6d7df37e8e414_icgraph.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__reg__base_ga139537171562bc756bb4862863d05874_icgraph.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__reg__base_ga139537171562bc756bb4862863d05874_icgraph.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__reg__base_ga139537171562bc756bb4862863d05874_icgraph.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__gpio__defines.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__gpio__defines.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__gpio__defines.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__reg__base_ga49756f647ec676d9b30eb2dcb5ceb6f5_cgraph.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__reg__base_ga49756f647ec676d9b30eb2dcb5ceb6f5_cgraph.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__reg__base_ga49756f647ec676d9b30eb2dcb5ceb6f5_cgraph.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__reg__base_gaeeeab1eb4a05f24958eeb38a93c9e0e8_cgraph.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__reg__base_gaeeeab1eb4a05f24958eeb38a93c9e0e8_cgraph.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__reg__base_gaeeeab1eb4a05f24958eeb38a93c9e0e8_cgraph.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__reg__base.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__reg__base.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__reg__base.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__reg__base_ga9546f62d7bb1695a34748ae418d2ed7f_icgraph.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__reg__base_ga9546f62d7bb1695a34748ae418d2ed7f_icgraph.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__reg__base_ga9546f62d7bb1695a34748ae418d2ed7f_icgraph.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__parity.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__parity.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__parity.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart__defines.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart__defines.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart__defines.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__ccm__file.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__ccm__file.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__ccm__file.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__reg__base_ga42ff0fbee0d1b80cc77667c14c3213dc_icgraph.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__reg__base_ga42ff0fbee0d1b80cc77667c14c3213dc_icgraph.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__reg__base_ga42ff0fbee0d1b80cc77667c14c3213dc_icgraph.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__usart__cr3__flowcontrol.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__usart__cr3__flowcontrol.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__usart__cr3__flowcontrol.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__gpio.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__gpio.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__gpio.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__ccm__file_gaf646e29cb4a268281221cc36abcf2bca_cgraph.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__ccm__file_gaf646e29cb4a268281221cc36abcf2bca_cgraph.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__ccm__file_gaf646e29cb4a268281221cc36abcf2bca_cgraph.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__ccm__file_gaab442a8982c0565226f498c7bcb91916_icgraph.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__ccm__file_gaab442a8982c0565226f498c7bcb91916_icgraph.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__ccm__file_gaab442a8982c0565226f498c7bcb91916_icgraph.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__iomuxc.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__iomuxc.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__iomuxc.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart_gaeeeab1eb4a05f24958eeb38a93c9e0e8_cgraph.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart_gaeeeab1eb4a05f24958eeb38a93c9e0e8_cgraph.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart_gaeeeab1eb4a05f24958eeb38a93c9e0e8_cgraph.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart_ga139537171562bc756bb4862863d05874_icgraph.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart_ga139537171562bc756bb4862863d05874_icgraph.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart_ga139537171562bc756bb4862863d05874_icgraph.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/graph_legend.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/graph_legend.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart_ga9546f62d7bb1695a34748ae418d2ed7f_icgraph.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart_ga9546f62d7bb1695a34748ae418d2ed7f_icgraph.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart_ga9546f62d7bb1695a34748ae418d2ed7f_icgraph.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart_ga4d307c35029294ab30d6d7df37e8e414_icgraph.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart_ga4d307c35029294ab30d6d7df37e8e414_icgraph.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart_ga4d307c35029294ab30d6d7df37e8e414_icgraph.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/dir_97aefd0d527b934f1d99a682da8fe6a9_dep.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/dir_97aefd0d527b934f1d99a682da8fe6a9_dep.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/dir_97aefd0d527b934f1d99a682da8fe6a9_dep.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart_ga42ff0fbee0d1b80cc77667c14c3213dc_icgraph.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart_ga42ff0fbee0d1b80cc77667c14c3213dc_icgraph.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart_ga42ff0fbee0d1b80cc77667c14c3213dc_icgraph.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart_gae7bc7c5529bd5a7cf1c98a13c6593c93_cgraph.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart_gae7bc7c5529bd5a7cf1c98a13c6593c93_cgraph.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart_gae7bc7c5529bd5a7cf1c98a13c6593c93_cgraph.map"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/dir_1991402828ae60ddc1f8fb78245f42fd_dep.dot" -Tpng -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/dir_1991402828ae60ddc1f8fb78245f42fd_dep.png" -Tcmapx -o "/home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/dir_1991402828ae60ddc1f8fb78245f42fd_dep.map"'
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/anadig_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/anadig_8h__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/ccm_8c__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/ccm_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/ccm_8h__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/gpio_8c__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/gpio_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/gpio_8h__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/iomuxc_8c__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/iomuxc_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/iomuxc_8h__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/memorymap_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/memorymap_8h__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/nvic_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/uart_8c__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/uart_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/uart_8h__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/vector__chipset_8c__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__anadig__defines.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__ccm__defines.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__defines.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__gpio__defines.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__gpio__reg__base.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__iomuxc__defines.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__iomuxc__reg.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart__defines.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__reg__base.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__reg__base_ga4d307c35029294ab30d6d7df37e8e414_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__reg__base_gaeeeab1eb4a05f24958eeb38a93c9e0e8_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__reg__base_ga139537171562bc756bb4862863d05874_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__reg__base_ga49756f647ec676d9b30eb2dcb5ceb6f5_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__reg__base_ga42ff0fbee0d1b80cc77667c14c3213dc_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__reg__base_ga9546f62d7bb1695a34748ae418d2ed7f_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__uart__parity.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__usart__cr3__flowcontrol.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__ccm__file.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__ccm__file_gaf646e29cb4a268281221cc36abcf2bca_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__ccm__file_gaab442a8982c0565226f498c7bcb91916_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__gpio.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__iomuxc.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart_ga4d307c35029294ab30d6d7df37e8e414_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart_gaeeeab1eb4a05f24958eeb38a93c9e0e8_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart_ga139537171562bc756bb4862863d05874_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart_gae7bc7c5529bd5a7cf1c98a13c6593c93_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart_ga42ff0fbee0d1b80cc77667c14c3213dc_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/group__VF6xx__uart_ga9546f62d7bb1695a34748ae418d2ed7f_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/dir_97aefd0d527b934f1d99a682da8fe6a9_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/aghosh01/TARS_codebase/libopencm3/doc/vf6xx/html/dir_1991402828ae60ddc1f8fb78245f42fd_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.

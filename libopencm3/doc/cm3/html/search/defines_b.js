@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['tpiu_5facpr',['TPIU_ACPR',['../tpiu_8h.html#a5b928b2763dbc7685675954dfbc77b5e',1,'tpiu.h']]],
+  ['tpiu_5fcspsr',['TPIU_CSPSR',['../tpiu_8h.html#a30ef8dde42bb8b5ce47fd60b3450b4ce',1,'tpiu.h']]],
+  ['tpiu_5fdevid',['TPIU_DEVID',['../tpiu_8h.html#ad9b75f6e89de1971b490ad69ffff4c0c',1,'tpiu.h']]],
+  ['tpiu_5fffcr',['TPIU_FFCR',['../tpiu_8h.html#ac8a5a5f384ba44b32ca65e20ed86745b',1,'tpiu.h']]],
+  ['tpiu_5fffcr_5fenfcont',['TPIU_FFCR_ENFCONT',['../tpiu_8h.html#ab7cac7937bdae1a69d7160da837e38ee',1,'tpiu.h']]],
+  ['tpiu_5fffcr_5ftrigin',['TPIU_FFCR_TRIGIN',['../tpiu_8h.html#a72cb9a2c1ad3196f2fdfcc2eb71accb5',1,'tpiu.h']]],
+  ['tpiu_5fffsr',['TPIU_FFSR',['../tpiu_8h.html#a020c57a36fab7ac79ff2310e34b8d708',1,'tpiu.h']]],
+  ['tpiu_5fffsr_5fflinprog',['TPIU_FFSR_FLINPROG',['../tpiu_8h.html#ab1fe105f0466d5161ead63d2d14a7085',1,'tpiu.h']]],
+  ['tpiu_5fffsr_5fftnonstop',['TPIU_FFSR_FTNONSTOP',['../tpiu_8h.html#a8d49e36884f30b37503ee137ba6555a7',1,'tpiu.h']]],
+  ['tpiu_5fffsr_5fftstopped',['TPIU_FFSR_FTSTOPPED',['../tpiu_8h.html#a73e49a21a5eb0e0e16448cb1f083aecb',1,'tpiu.h']]],
+  ['tpiu_5fffsr_5ftcpresent',['TPIU_FFSR_TCPRESENT',['../tpiu_8h.html#a06f2d73ced3d6b19c9170bfdaa058b0c',1,'tpiu.h']]],
+  ['tpiu_5flar',['TPIU_LAR',['../tpiu_8h.html#ab976c60354252320159aac96b0b328bd',1,'tpiu.h']]],
+  ['tpiu_5flsr',['TPIU_LSR',['../tpiu_8h.html#af953912baf13340fd4a81cfb4ad71d99',1,'tpiu.h']]],
+  ['tpiu_5fsppr',['TPIU_SPPR',['../tpiu_8h.html#a07413fb90b689fafae5fb669e7bfadd7',1,'tpiu.h']]],
+  ['tpiu_5fsppr_5fasync_5fmanchester',['TPIU_SPPR_ASYNC_MANCHESTER',['../tpiu_8h.html#a3eba7b77a69dc4e4f41360c6b77dea72',1,'tpiu.h']]],
+  ['tpiu_5fsppr_5fasync_5fnrz',['TPIU_SPPR_ASYNC_NRZ',['../tpiu_8h.html#a93c1f6789d79fbfce3d9be9c207fdeb8',1,'tpiu.h']]],
+  ['tpiu_5fsppr_5fsync',['TPIU_SPPR_SYNC',['../tpiu_8h.html#a819c9d9fcf2a17f910382d0747342523',1,'tpiu.h']]],
+  ['tpiu_5fsspsr',['TPIU_SSPSR',['../tpiu_8h.html#afe9850f6644e019acbd41ae36f2a9bb8',1,'tpiu.h']]],
+  ['tpui_5fdevid_5ffifo_5fsize_5fmask',['TPUI_DEVID_FIFO_SIZE_MASK',['../tpiu_8h.html#a3831444239089a4bcf01c5c9cc849008',1,'tpiu.h']]],
+  ['tpui_5fdevid_5fmanchester_5fsupported',['TPUI_DEVID_MANCHESTER_SUPPORTED',['../tpiu_8h.html#a3984ad73b9e15f6507ec771d6ea1a9ec',1,'tpiu.h']]],
+  ['tpui_5fdevid_5fnrz_5fsupported',['TPUI_DEVID_NRZ_SUPPORTED',['../tpiu_8h.html#a35b5d2f1df1b7b2bf5aa26ca581f536f',1,'tpiu.h']]]
+];

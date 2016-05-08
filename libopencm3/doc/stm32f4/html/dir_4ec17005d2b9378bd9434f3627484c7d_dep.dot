@@ -1,0 +1,16 @@
+digraph "stm32" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_97aefd0d527b934f1d99a682da8fe6a9 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="lib" fontname="Helvetica", fontsize="10", URL="dir_97aefd0d527b934f1d99a682da8fe6a9.html"]
+  subgraph clusterdir_4ec17005d2b9378bd9434f3627484c7d {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_4ec17005d2b9378bd9434f3627484c7d.html"];
+    dir_4ec17005d2b9378bd9434f3627484c7d [shape=plaintext label="stm32"];
+    dir_205c2b2ce3ef6e2ec6e02a16510d5024 [shape=box label="common" color="black" fillcolor="white" style="filled" URL="dir_205c2b2ce3ef6e2ec6e02a16510d5024.html"];
+    dir_041024e9764839cdc2fc8bebd2f4feb5 [shape=box label="f4" color="black" fillcolor="white" style="filled" URL="dir_041024e9764839cdc2fc8bebd2f4feb5.html"];
+  }
+  }
+  dir_d44c64559bbebec7f509842c48db8b23 [shape=box label="include" fillcolor="white" style="filled" color="red" URL="dir_d44c64559bbebec7f509842c48db8b23.html"];
+  dir_041024e9764839cdc2fc8bebd2f4feb5->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="1", labeldistance=1.5 headhref="dir_000002_000003.html"];
+}

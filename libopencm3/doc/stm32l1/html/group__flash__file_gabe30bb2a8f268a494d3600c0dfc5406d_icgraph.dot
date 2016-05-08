@@ -1,0 +1,23 @@
+digraph "flash_set_program_size"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="flash_set_program_size",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="flash_erase_all_sectors",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__flash__file.html#ga6374518c449cb5f79631be81a818d75b",tooltip="Erase All FLASH. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="flash_erase_sector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__flash__file.html#gad49638626fa6ff605563012ef599bb11",tooltip="Erase a Sector of FLASH. "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="flash_program_byte",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__flash__file.html#gaecb2ef6a6334477e36fceed302b1ab6d",tooltip="Program an 8 bit Byte to FLASH. "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="flash_program",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__flash__file.html#ga9149ea4d291a737b89ca7475471806a0",tooltip="Program a Data Block to FLASH. "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="flash_program_double_word",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__flash__file.html#gab8f20c93b7162f8a3b672caee01c7e09",tooltip="Program a 64 bit Word to FLASH. "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="flash_program_half_word",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__flash__file.html#gaf5077b5726c70fa9418db9d73182f89d",tooltip="Program a Half Word to FLASH. "];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="flash_program_word",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__flash__file.html#ga73937aa6df8710e95425b165730626a2",tooltip="Program a 32 bit Word to FLASH. "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="flash_program_word",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__flash__defines.html#ga73937aa6df8710e95425b165730626a2",tooltip="Program a 32 bit Word to FLASH. "];
+}

@@ -1,0 +1,41 @@
+digraph "RCC Defines"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node3 [label="RCC_CFGR USB prescale\l Factors",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__cfgr__usbpre.html"];
+  Node0 [label="RCC Defines",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node8 [label="RCC_CFGR APB2 prescale\l Factors",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__cfgr__apb2pre.html"];
+  Node1 [label="STM32F1xx Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__STM32F1xx__defines.html",tooltip="Defined Constants and Types for the STM32F1xx series. "];
+  Node15 [label="RCC_APB2ENR enable\l values",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__apb2enr__en.html"];
+  Node10 [label="RCC_CFGR AHB prescale\l Factors",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__cfgr__ahbpre.html"];
+  Node2 [label="RCC_CFGR Microcontroller\l Clock Output Source",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__cfgr__co.html"];
+  Node7 [label="RCC ADC clock prescaler\l enable values",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__cfgr__adcpre.html"];
+  Node6 [label="RCC_CFGR PLL Clock\l Source",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__cfgr__pcs.html"];
+  Node13 [label="RCC_APB1RSTR reset\l values",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__apb1rstr__rst.html"];
+  Node16 [label="RCC_APB1ENR enable\l values",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__apb1enr__en.html"];
+  Node14 [label="RCC_AHBENR enable values",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__ahbenr__en.html"];
+  Node5 [label="RCC_CFGR HSE Divider\l for PLL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__cfgr__hsepre.html"];
+  Node11 [label="RCC_CFGR System Clock\l Selection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__cfgr__scs.html"];
+  Node17 [label="RCC_AHBRSTR reset values",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__ahbrstr__rst.html"];
+  Node4 [label="RCC_CFGR PLL Multiplication\l Factor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__cfgr__pmf.html"];
+  Node12 [label="RCC_APB2RSTR reset\l values",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__apb2rstr__rst.html"];
+  Node9 [label="RCC_CFGR APB1 prescale\l Factors",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__cfgr__apb1pre.html"];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node5 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node6 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node7 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node8 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node9 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node10 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node11 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node12 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node13 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node14 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node15 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node16 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node17 [shape=plaintext, dir="back", style="solid"];
+}

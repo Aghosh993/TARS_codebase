@@ -1,0 +1,9 @@
+digraph "ADC Sample Time Selection for All Channels"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node0 [label="ADC Sample Time Selection\l for All Channels",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 [label="ADC Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__defines.html",tooltip="Defined Constants and Types for the STM32L1xx Analog to Digital Converters "];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+}

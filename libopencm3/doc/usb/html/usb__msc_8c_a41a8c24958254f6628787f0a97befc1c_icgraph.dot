@@ -1,0 +1,11 @@
+digraph "msc_data_rx_cb"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="msc_data_rx_cb",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="msc_set_config",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__msc_8c.html#a226667566a4c9460bc577aa9c72a14b6",tooltip="Setup the endpoints to be bulk & register the callbacks. "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="usb_msc_init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__msc.html#ga5e6959c3ac6ff4efab4fd3b59353f497",tooltip="Initializes the USB Mass Storage subsystem. "];
+}

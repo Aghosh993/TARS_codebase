@@ -1,0 +1,33 @@
+digraph "ADC Defines"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="STM32F4xx Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__STM32F4xx__defines.html",tooltip="Defined Constants and Types for the STM32F4xx series. "];
+  Node8 [label="ADC Prescale",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__ccr__adcpre.html"];
+  Node11 [label="ADC Multi mode selection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__multi__mode.html"];
+  Node4 [label="ADC Trigger Identifier\l for Regular group",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__trigger__regular.html"];
+  Node9 [label="ADC DMA mode for multi\l ADC mode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__dma__mode.html"];
+  Node13 [label="ADC Channel Numbers",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__channel.html"];
+  Node5 [label="ADC Injected Trigger\l Polarity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__trigger__polarity__injected.html"];
+  Node2 [label="ADC Resolution.",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__cr1__res.html"];
+  Node3 [label="ADC Trigger Polarity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__trigger__polarity__regular.html"];
+  Node7 [label="ADC Sample Time Selection\l for All Channels",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__sample__rg.html"];
+  Node6 [label="ADC Trigger Identifier\l for Injected group",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__trigger__injected.html"];
+  Node0 [label="ADC Defines",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node10 [label="ADC Delay between 2\l sampling phases",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__delay.html"];
+  Node12 [label="ADC register base addresses",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__reg__base.html"];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node5 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node6 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node7 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node8 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node9 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node10 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node11 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node12 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node13 [shape=plaintext, dir="back", style="solid"];
+}

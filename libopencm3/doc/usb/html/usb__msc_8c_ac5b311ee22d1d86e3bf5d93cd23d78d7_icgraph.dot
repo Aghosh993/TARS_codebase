@@ -1,0 +1,32 @@
+digraph "get_cbw_buf"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="get_cbw_buf",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="scsi_inquiry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__msc_8c.html#a85cd7451c1bfc24383b60bd8b53073a1"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="scsi_command",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__msc_8c.html#ad834e80e08a1fc52cb6c2a7e4c60e7c4"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="msc_data_rx_cb",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__msc_8c.html#a41a8c24958254f6628787f0a97befc1c",tooltip="Handle the USB &#39;OUT&#39; requests. "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="msc_set_config",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__msc_8c.html#a226667566a4c9460bc577aa9c72a14b6",tooltip="Setup the endpoints to be bulk & register the callbacks. "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="usb_msc_init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__msc.html#ga5e6959c3ac6ff4efab4fd3b59353f497",tooltip="Initializes the USB Mass Storage subsystem. "];
+  Node3 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="msc_data_tx_cb",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__msc_8c.html#a88700274691bf361f44a0e3b5703ec9f",tooltip="Handle the USB &#39;IN&#39; requests. "];
+  Node7 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="scsi_read_10",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__msc_8c.html#aa9340553bfc7682037cce665df163506"];
+  Node8 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="scsi_read_6",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__msc_8c.html#a700c7b32d7db1ab7d9a55fb750cfed1a"];
+  Node9 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="scsi_write_10",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__msc_8c.html#a67ab7f906e09e9fc149b8fa647a91d2f"];
+  Node10 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="scsi_write_6",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__msc_8c.html#af0e6535bbde2e9a00c6e4c3c77d34540"];
+  Node11 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

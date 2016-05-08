@@ -1,0 +1,25 @@
+var uart_8c =
+[
+    [ "UART_CGU_AUTOBLOCK_CLOCK_BIT", "uart_8c.html#aea84952f693f9137db9b6a11cc98901b", null ],
+    [ "UART_CGU_BASE_CLK_SEL_SHIFT", "uart_8c.html#a7b609618879456d180e1236cb7744c2b", null ],
+    [ "UART_SRC_32K", "uart_8c.html#acb46531b06dd49e16191548a86e32693", null ],
+    [ "UART_SRC_ENET_RX", "uart_8c.html#a48d4e0a6a4174d3341b3135c7e4838fa", null ],
+    [ "UART_SRC_ENET_TX", "uart_8c.html#aefcff0f8e1d2b98cbaa911d2ca88ed1d", null ],
+    [ "UART_SRC_GP_CLKIN", "uart_8c.html#aaa5464cb3ccfe916ed3d22df3f9a4699", null ],
+    [ "UART_SRC_IDIVA", "uart_8c.html#a5975a9785a4eed41f99cf610b560cbb5", null ],
+    [ "UART_SRC_IDIVB", "uart_8c.html#aea8ed5888e368afa1aabfed08b416e76", null ],
+    [ "UART_SRC_IDIVC", "uart_8c.html#aebb90c429c6458bb5d53116c9a01fa59", null ],
+    [ "UART_SRC_IDIVD", "uart_8c.html#ab98072566df85637add1e1a75fc549e9", null ],
+    [ "UART_SRC_IDIVE", "uart_8c.html#a2263ba5d9281c52b502aa8b8dcdc2048", null ],
+    [ "UART_SRC_IRC", "uart_8c.html#a34da291264278ab6ad198e23e4fe65f3", null ],
+    [ "UART_SRC_PLL0AUDIO", "uart_8c.html#a582d66f52ebd85a0abb4143c7a5f5da1", null ],
+    [ "UART_SRC_PLL0USB", "uart_8c.html#aa377be1712a8e924a2ba88a75d323874", null ],
+    [ "UART_SRC_PLL1", "uart_8c.html#a7172b2d6b9ef538859b626f5124d76bd", null ],
+    [ "UART_SRC_XTAL", "uart_8c.html#a5160ca664260b605f7c5073d3887b286", null ],
+    [ "uart_init", "uart_8c.html#adafa12a189cb04d599d1ab81acf6f27c", null ],
+    [ "uart_read", "uart_8c.html#aa275f4c53cdc9232630db690b8fa96a3", null ],
+    [ "uart_read_timeout", "uart_8c.html#aa4bb124b194ac41242fc20f750123d12", null ],
+    [ "uart_rx_data_ready", "uart_8c.html#a04b03e1c1e073c275712d2534ca3c5c8", null ],
+    [ "uart_write", "uart_8c.html#ab6439004b0e189ac68604936be285930", null ],
+    [ "dummy_read", "uart_8c.html#ad3b4380fe8ac2e40c6d5367d9768fbd3", null ]
+];

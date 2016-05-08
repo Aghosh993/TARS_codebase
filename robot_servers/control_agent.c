@@ -1,3 +1,5 @@
+// Standard includes:
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -8,6 +10,11 @@
 #include <netinet/in.h>
 #include <sys/socket.h>
 #include <signal.h>
+#include <pthread.h>
+
+// User includes:
+#include "rpi_comms.h"
+#include "serialport_linux.h"
  
 #define PORTNUM 8100
 
@@ -40,8 +47,74 @@ typedef enum {
     ST_CONNECTED
 } server_state;
 
+void *receive_uart_data(void *args)
+{
+    outgoing_status_packet *st = (outgoing_status_packet *)args;
+    while(run_prog)
+    {
+        printf("Hello from rx thread\n");
+        usleep(1000);
+    }
+}
+
+void *transmit_uart_data(void *args)
+{
+    incoming_command_packet *p = (incoming_command_packet *)args;
+    uint8_t *outbuf = (uint8_t *)malloc(sizeof(incoming_command_packet));
+    int i = 0;
+
+    while(run_prog)
+    {
+        // printf("Hello from tx thread\n");
+        create_command_transmission(p->fwd_speed, p->turn_amt, p->movement_mode, p->turret_pan, p->turret_tilt, p->logic_control_states, outbuf);
+        for(i=0; i<sizeof(incoming_command_packet)+1; ++i)
+        {
+            uart_send_byte_linux(outbuf[i]);
+            printf("%d, ", outbuf[i]);
+        }
+        printf("\n");
+        usleep(1000);
+    }    
+}
+
 int main(int argc, char *argv[])
 {
+    printf("Opening Pi UART...\n");
+    setup_linux_serial("/dev/ttyS0");
+    int ser_fd = get_serial_fd();
+    if(ser_fd < 0)
+    {
+        printf("Unable to open serial port!! Aborting!!\r\n");
+        return -1;
+    }
+
+    printf("Open successful!!\n");
+
+    init_pi_comms();
+
+    pthread_t stm32_uart_rx_thread;
+    pthread_t stm32_uart_tx_thread;
+
+    outgoing_status_packet stat;
+    incoming_command_packet cmd;
+
+    cmd.fwd_speed = 112;
+    cmd.turn_amt = -25;
+    cmd.movement_mode = 3;
+    cmd.turret_pan = 150;
+    cmd.turret_tilt = 45;
+    cmd.logic_control_states = 0b11110110;
+
+    if(pthread_create(&stm32_uart_rx_thread, NULL, receive_uart_data, &stat))
+    {
+        printf("ERROR with thread creation!!\n");
+    }
+
+    if(pthread_create(&stm32_uart_tx_thread, NULL, transmit_uart_data, &cmd))
+    {
+        printf("ERROR with thread creation!!\n");
+    }
+
     server_state srv_st = ST_WAIT_FOR_CONN;
     run_prog = 1;
     signal(SIGINT, sig_ctrlC_handler);
@@ -142,8 +215,10 @@ int main(int argc, char *argv[])
                     //                                                                 data_to_joystick.joystick_data_output.x_right,
                     //                                                                 data_to_joystick.joystick_data_output.y_right);
 
-                    printf("Left bumper: %d | Right bumper: %d\n", data_to_joystick.joystick_data_output.left_bumper,
-                                                                    data_to_joystick.joystick_data_output.right_bumper);
+                    // printf("Left bumper: %d | Right bumper: %d\n", data_to_joystick.joystick_data_output.left_bumper,
+                    //                                                 data_to_joystick.joystick_data_output.right_bumper);
+
+                    printf("Button state: %d\n", data_to_joystick.joystick_data_output.button_states);
                     /* Act on incoming data and set commands to STM32 over UART: */
                 }
 

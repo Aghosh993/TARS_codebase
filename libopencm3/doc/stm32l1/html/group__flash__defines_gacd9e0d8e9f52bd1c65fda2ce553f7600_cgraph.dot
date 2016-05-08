@@ -1,0 +1,13 @@
+digraph "flash_lock"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="flash_lock",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="flash_lock_option_bytes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__flash__file.html#ga3e656c078b282798add1874cd398f1eb",tooltip="Lock the Option Byte Access. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="flash_lock_pecr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__flash__file.html#ga126302d8ca4812cbcb0c8b9bd8a9375a"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="flash_lock_progmem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__flash__file.html#ga627ef6a095bea6eff359e738076a717c"];
+}

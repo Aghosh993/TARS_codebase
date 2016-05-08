@@ -1,0 +1,23 @@
+digraph "rtc_enter_config_mode"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="rtc_enter_config_mode",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="rtc_disable_alarm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rtc__file.html#ga718b866eab2ba73221d37f7d15ba9737"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="rtc_enable_alarm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rtc__file.html#gab7f69ee0de1cae2518b2822fd82d5201"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="rtc_interrupt_disable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rtc__file.html#ga4de126c91f7eedf70262a99e663a6fc5"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="rtc_interrupt_enable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rtc__file.html#gaad0059f95046be4d158626cc0ed199fd"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="rtc_set_alarm_time",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rtc__file.html#ga3f53231bbbeef79acc322f2a6b045d3f"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="rtc_set_counter_val",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rtc__file.html#gacd673063942c2bedededd5760e4764ff"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="rtc_set_prescale_val",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rtc__file.html#ga1b2c2b6aa8879eb16f7cf3207587725e"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="rtc_auto_awake",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rtc__file.html#ga7693c69c9ff726487720b12576a20968"];
+}

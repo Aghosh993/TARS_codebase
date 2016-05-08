@@ -1,0 +1,30 @@
+digraph "rcc_sysclk_config"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="rcc_sysclk_config",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="rcc_change_pll_divisor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__high__level.html#ga1c5a8dbbc0a6bac380b0041962075269",tooltip="Change the PLL divisor. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="rcc_pll_bypass_disable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__low__level.html#gabbbe68ef690e48ae19d4ff04e69cc9c3",tooltip="Disable the PLL bypass and use the PLL clock. "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="rcc_pll_bypass_enable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__low__level.html#ga269054cc63981ae593e6820de2fe76b1",tooltip="Enable the PLL bypass and use the oscillator clock. "];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="rcc_set_pll_divisor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__low__level.html#ga104041e1468a0fc62d6c584a25859053",tooltip="Set the PLL clock divisor (from 400MHz) "];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="rcc_wait_for_pll_ready",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__low__level.html#ga0f5f3bea5dbfde10760a9cd775951a51",tooltip="Wait for main PLL to lock. "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="rcc_configure_xtal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__low__level.html#ga2cd8f194ad903834c78212a0eeb05aa4",tooltip="Configure the crystal type connected to the device. "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="rcc_enable_main_osc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__low__level.html#gafc653bc7b616053515e1fd4aeb54f972",tooltip="Enable the main oscillator. "];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="rcc_enable_rcc2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__low__level.html#gae166a674c8b6592adea0ff77c1e009e9",tooltip="Enable the use of SYSCTL_RCC2 register for clock control. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="rcc_pll_on",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__low__level.html#gaf58b85261f65604132b67d3567c2b0c3",tooltip="Power up the main PLL. "];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="rcc_set_osc_source",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__low__level.html#ga6acaa4f857ca454c3f90f579091b3246",tooltip="Set the oscillator source to be used by the system clock. "];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="xtal_to_freq",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__high__level.html#ga43a00aa2241426ed96573abc3de839e9"];
+}

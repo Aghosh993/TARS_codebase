@@ -1,0 +1,23 @@
+digraph "usbd_ep_read_packet"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="usbd_ep_read_packet",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="_usbd_control_out",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__private_8h.html#a1a921e8785fafeee17c588aa26cff014"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="usbd_init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__drivers__file.html#ga8bbc488106ca72c2b550c1c9f89d5748",tooltip="Main initialization entry point. "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="_usbd_control_setup",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__private_8h.html#ad4bc495b7e757434644e1dece336b261"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="msc_data_rx_cb",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__msc_8c.html#a41a8c24958254f6628787f0a97befc1c",tooltip="Handle the USB &#39;OUT&#39; requests. "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="msc_set_config",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__msc_8c.html#a226667566a4c9460bc577aa9c72a14b6",tooltip="Setup the endpoints to be bulk & register the callbacks. "];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="usb_msc_init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__msc.html#ga5e6959c3ac6ff4efab4fd3b59353f497",tooltip="Initializes the USB Mass Storage subsystem. "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="usb_control_recv_chunk",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__control__file.html#gaf3b08c6a689c9f5a20f636507e70bb52"];
+  Node8 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

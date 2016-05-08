@@ -1,0 +1,11 @@
+digraph "Crypto_defines"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="Registers (Generic)",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__crypto__registers__gen.html",tooltip="Register access to the CRYP controller. "];
+  Node2 [label="API (Generic)",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__crypto__api__gen.html",tooltip="API for the CRYP controller. "];
+  Node0 [label="Crypto_defines",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0->Node1 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+}

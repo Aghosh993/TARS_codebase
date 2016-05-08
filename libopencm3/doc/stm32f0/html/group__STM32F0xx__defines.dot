@@ -1,0 +1,47 @@
+digraph "STM32F0xx Defines"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node14 [label="RCC Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__defines.html",tooltip="Defined Constants and Types for the STM32F0xx Reset and Clock Control "];
+  Node13 [label="PWR Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__pwr__defines.html",tooltip="Defined Constants and Types for the STM32F0xx PWR Control "];
+  Node17 [label="SYSCFG Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__syscfg__defines.html",tooltip="Defined Constants and Types for the STM32F0xx System Config "];
+  Node4 [label="CRC Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__crc__defines.html",tooltip="libopencm3 Defined Constants and Types for the STM32F1xx CRC Generator  "];
+  Node6 [label="DAC Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__dac__defines.html",tooltip="Defined Constants and Types for the STM32F0xx Digital to Analog Converter "];
+  Node2 [label="CEC Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CEC__defines.html",tooltip="Defined Constants and Types for the STM32F0xx HDMI-CEC "];
+  Node11 [label="I2C Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__i2c__defines.html",tooltip="Defined Constants and Types for the STM32F0xx I2C "];
+  Node8 [label="EXTI Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__exti__defines.html",tooltip="Defined Constants and Types for the STM32F0xx External Interrupts  "];
+  Node12 [label="IWDG Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__iwdg__defines.html",tooltip="Defined Constants and Types for the STM32F0xx Independent Watchdog Timer "];
+  Node16 [label="SPI Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__spi__defines.html",tooltip="Defined Constants and Types for the STM32F0xx SPI "];
+  Node0 [label="STM32F0xx Defines",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node10 [label="GPIO Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gpio__defines.html",tooltip="Defined Constants and Types for the STM32F0xx General Purpose I/O "];
+  Node18 [label="Timers Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__timer__defines.html",tooltip="Defined Constants and Types for the STM32F0xx Timers "];
+  Node5 [label="CRS Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__CRS__defines.html",tooltip="Defined Constants and Types for the STM32F0xx Clock Recovery "];
+  Node1 [label="ADC Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__defines.html",tooltip="Defined Constants and Types for the STM32F0xx Analog to Digital Converter "];
+  Node20 [label="USART Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usart__defines.html",tooltip="Defined Constants and Types for the STM32F0xx USART "];
+  Node19 [label="TSC Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__tsc__defines.html",tooltip="Defined Constants and Types for the STM32F0xx Touch Sensor "];
+  Node15 [label="RTC Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rtc__defines.html",tooltip="Defined Constants and Types for the STM32F0xx RTC "];
+  Node7 [label="DMA Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__dma__defines.html",tooltip="Defined Constants and Types for the STM32F0xx DMA Controller. "];
+  Node3 [label="COMP Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__comp__defines.html",tooltip="libopencm3 Defined Constants and Types for the STM32F0xx Comparator module "];
+  Node9 [label="FLASH Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__flash__defines.html",tooltip="Defined Constants and Types for the STM32F0xx Flash memory "];
+  Node0->Node1 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node5 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node6 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node7 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node8 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node9 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node10 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node11 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node12 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node13 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node14 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node15 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node16 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node17 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node18 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node19 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node20 [shape=plaintext, dir="back", style="solid"];
+}

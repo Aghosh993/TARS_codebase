@@ -1,0 +1,13 @@
+digraph "Generic USB"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="Generic USB Drivers",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__drivers__file.html",tooltip="Generic USB Drivers "];
+  Node3 [label="Generic USB Standard\l Request Interface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__standard__file.html",tooltip="Generic USB Standard Request Interface "];
+  Node2 [label="Generic USB Control\l Requests",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__control__file.html",tooltip="Generic USB Control Requests "];
+  Node0 [label="Generic USB",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0->Node1 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+}

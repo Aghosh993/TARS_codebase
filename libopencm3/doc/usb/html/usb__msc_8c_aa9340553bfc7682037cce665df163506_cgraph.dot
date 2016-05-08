@@ -1,0 +1,13 @@
+digraph "scsi_read_10"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="scsi_read_10",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="get_cbw_buf",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__msc_8c.html#ac5b311ee22d1d86e3bf5d93cd23d78d7"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="set_sbc_status_good",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__msc_8c.html#acea2b1d4fda2777c7729104dfb3109ba"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="set_sbc_status",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__msc_8c.html#a285558a874e454328ae7cba96306b253"];
+}

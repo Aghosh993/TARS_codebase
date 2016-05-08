@@ -1,0 +1,9 @@
+digraph "Alternate Function Pin Selection"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node0 [label="Alternate Function\l Pin Selection",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 [label="GPIO Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gpio__defines.html",tooltip="Defined Constants and Types for the STM32F4xx General Purpose I/O "];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+}

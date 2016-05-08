@@ -1,0 +1,15 @@
+digraph "LM4F"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node2 [label="RCC",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__file.html",tooltip="libopencm3 LM4F Clock control API "];
+  Node1 [label="GPIO",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gpio__file.html",tooltip="libopencm3 LM4F General Purpose I/O "];
+  Node0 [label="LM4F",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 [label="UART",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__uart__file.html",tooltip="libopencm3 LM4F Universal Asynchronous Receiver Transmitter "];
+  Node4 [label="USB",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__file.html",tooltip="libopencm3 LM4F Universal Serial Bus controller  "];
+  Node0->Node1 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
+}

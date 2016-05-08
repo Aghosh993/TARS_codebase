@@ -1,0 +1,13 @@
+digraph "usb_standard_get_descriptor"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="usb_standard_get_descriptor",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="build_config_descriptor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__standard__file.html#gaf8a21c66ec88535a258872791c468098"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="usb_descriptor_index",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__standard__file.html#gaf52328d55b34702e49cb14ec9005ca19"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="usb_descriptor_type",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__standard__file.html#ga2df65bb0dcba3643cde420b3fdc08ff0"];
+}

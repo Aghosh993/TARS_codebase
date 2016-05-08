@@ -1,0 +1,17 @@
+digraph "VF6xx Defines"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node4 [label="IO MUX Controller Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__VF6xx__iomuxc__defines.html",tooltip="Defined Constants and Types for the VF6xx IO MUX Controller "];
+  Node0 [label="VF6xx Defines",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 [label="ANADIG Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__anadig__defines.html",tooltip="Defined Constants and Types for the VF6xx Analog components control digital interface ..."];
+  Node5 [label="UART Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__VF6xx__uart__defines.html",tooltip="Defined Constants and Types for the VF6xx UART Module "];
+  Node2 [label="CCM Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__ccm__defines.html",tooltip="Defined Constants and Types for the VF6xx Common Clock Module "];
+  Node3 [label="GPIO Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__VF6xx__gpio__defines.html",tooltip="Defined Constants and Types for the VF6xx GPIO Module "];
+  Node0->Node1 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node5 [shape=plaintext, dir="back", style="solid"];
+}

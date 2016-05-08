@@ -1,0 +1,26 @@
+var group__CM3__nvic__isrprototypes__EFM32TG =
+[
+    [ "acmp01_isr", "group__CM3__nvic__isrprototypes__EFM32TG.html#ga4d47e6f2449e1c996153b838744b34c8", null ],
+    [ "adc0_isr", "group__CM3__nvic__isrprototypes__EFM32TG.html#ga77ff30ed6dd39dca02ba4189974d7fec", null ],
+    [ "aes_isr", "group__CM3__nvic__isrprototypes__EFM32TG.html#ga4afd602e7537821b20d8998256b48557", null ],
+    [ "cmu_isr", "group__CM3__nvic__isrprototypes__EFM32TG.html#ga5ae63fec96f78f359de59d7ef9a53a30", null ],
+    [ "dac0_isr", "group__CM3__nvic__isrprototypes__EFM32TG.html#ga4c288db16cbeb3fe6cd68bcfd6869ce0", null ],
+    [ "dma_isr", "group__CM3__nvic__isrprototypes__EFM32TG.html#gab2cbdc630c5025208f7bc46802eb438b", null ],
+    [ "gpio_even_isr", "group__CM3__nvic__isrprototypes__EFM32TG.html#gae47769aa6f3da700fc6257598c933e8f", null ],
+    [ "gpio_odd_isr", "group__CM3__nvic__isrprototypes__EFM32TG.html#gab145ab70c10f6a3f7060c3c367cd5572", null ],
+    [ "i2c0_isr", "group__CM3__nvic__isrprototypes__EFM32TG.html#gaeac2fc9ec08e48863502b12b879c9344", null ],
+    [ "lcd_isr", "group__CM3__nvic__isrprototypes__EFM32TG.html#gaa6481e9fa068653cf68ebad50d3fad13", null ],
+    [ "lesense_isr", "group__CM3__nvic__isrprototypes__EFM32TG.html#ga327d12909317912c0a5870b280428113", null ],
+    [ "letimer0_isr", "group__CM3__nvic__isrprototypes__EFM32TG.html#gaf416f00e55b0753184461f4ba1172cf0", null ],
+    [ "leuart0_isr", "group__CM3__nvic__isrprototypes__EFM32TG.html#gaa2754728569aedfb44509bba08f755fc", null ],
+    [ "msc_isr", "group__CM3__nvic__isrprototypes__EFM32TG.html#ga63147802adb81812796a563fee244e18", null ],
+    [ "pcnt0_isr", "group__CM3__nvic__isrprototypes__EFM32TG.html#ga96d9d3767a9e493f06959ab30a0f1541", null ],
+    [ "rtc_isr", "group__CM3__nvic__isrprototypes__EFM32TG.html#ga0aac539d8cd80c163b7d986d10e53ced", null ],
+    [ "timer0_isr", "group__CM3__nvic__isrprototypes__EFM32TG.html#gac78185b838cb748a9a79dc30a9476b7b", null ],
+    [ "timer1_isr", "group__CM3__nvic__isrprototypes__EFM32TG.html#ga368742bd04b10d09ef40806342cf4e67", null ],
+    [ "usart0_rx_isr", "group__CM3__nvic__isrprototypes__EFM32TG.html#gac3ff1bdc8e04e45e9ffee70f915e4a73", null ],
+    [ "usart0_tx_isr", "group__CM3__nvic__isrprototypes__EFM32TG.html#ga959e0b092ee737a9b6f6eb5d6489e57c", null ],
+    [ "usart1_rx_isr", "group__CM3__nvic__isrprototypes__EFM32TG.html#gaebda7c2e46fb506af1c2f1cda22f958c", null ],
+    [ "usart1_tx_isr", "group__CM3__nvic__isrprototypes__EFM32TG.html#ga229b55e2dc0f37c4c25042380e5372d1", null ],
+    [ "vcmp_isr", "group__CM3__nvic__isrprototypes__EFM32TG.html#ga29af68211531728c423755ce8646f375", null ]
+];

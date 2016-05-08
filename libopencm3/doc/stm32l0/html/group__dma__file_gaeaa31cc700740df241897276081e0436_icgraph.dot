@@ -1,0 +1,17 @@
+digraph "dma_clear_interrupt_flags"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="dma_clear_interrupt\l_flags",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="dma_enable_direct_mode\l_error_interrupt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__dma__file.html#ga3f5a21bbe3efe0032c02f054d5ceec32",tooltip="DMA Stream Enable Interrupt on Direct Mode Error. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="dma_enable_fifo_error\l_interrupt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__dma__file.html#ga856057f523c5a127beffc1f91b132d15",tooltip="DMA Enable Interrupt on FIFO Error. "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="dma_enable_half_transfer\l_interrupt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__dma__file.html#ga05bfe7ca609aaf686e9258b4a0245d72",tooltip="DMA Stream Enable Interrupt on Transfer Half Complete. "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="dma_enable_transfer\l_complete_interrupt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__dma__file.html#ga1ee7b429eeb959f41c1dbd9d87312dc9",tooltip="DMA Stream Enable Interrupt on Transfer Complete. "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="dma_enable_transfer\l_error_interrupt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__dma__file.html#ga6be1b284bd502af608b3993abe1a9931",tooltip="DMA Stream Enable Interrupt on Transfer Error. "];
+}

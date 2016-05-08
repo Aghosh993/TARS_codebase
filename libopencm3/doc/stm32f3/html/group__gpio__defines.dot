@@ -1,0 +1,23 @@
+digraph "GPIO Defines"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node2 [label="GPIO Pin Identifiers",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gpio__pin__id.html"];
+  Node5 [label="GPIO Output Pin Driver Type",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gpio__output__type.html",tooltip="Push Pull  Open Drain "];
+  Node1 [label="STM32F3xx Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__STM32F3xx__defines.html",tooltip="Defined Constants and Types for the STM32F3xx series. "];
+  Node4 [label="GPIO Pin Direction\l and Analog/Digital Mode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gpio__mode.html"];
+  Node6 [label="GPIO Output Pin Speed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gpio__speed.html"];
+  Node7 [label="GPIO Output Pin Pullup",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gpio__pup.html"];
+  Node3 [label="GPIO Port IDs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gpio__port__id.html"];
+  Node8 [label="Alternate Function\l Pin Selection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gpio__af__num.html"];
+  Node0 [label="GPIO Defines",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node5 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node6 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node7 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node8 [shape=plaintext, dir="back", style="solid"];
+}

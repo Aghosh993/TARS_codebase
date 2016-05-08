@@ -51,4 +51,6 @@
  ../libopencm3/include/libopencm3/stm32/spi.h \
  ../libopencm3/include/libopencm3/stm32/f3/spi.h \
  ../libopencm3/include/libopencm3/stm32/common/spi_common_f03.h \
- ../libopencm3/include/libopencm3/stm32/common/spi_common_all.h
+ ../libopencm3/include/libopencm3/stm32/common/spi_common_all.h \
+ ../libopencm3/include/libopencm3/stm32/adc.h \
+ ../libopencm3/include/libopencm3/stm32/f3/adc.h

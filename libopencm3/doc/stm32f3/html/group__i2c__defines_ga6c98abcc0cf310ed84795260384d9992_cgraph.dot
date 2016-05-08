@@ -1,0 +1,13 @@
+digraph "i2c_reset"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="i2c_reset",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="rcc_periph_reset_pulse",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__defines.html#gae8846a0bf49a46bcdc10a412bc69ee58",tooltip="Reset Peripheral, pulsed. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="rcc_peripheral_clear\l_reset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__defines.html#gabb1b312c6db8db25447460742dcdb566",tooltip="RCC Remove Reset on Peripherals. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="rcc_peripheral_reset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rcc__defines.html#ga3779f1460275e6788f706c61d7f77205",tooltip="RCC Reset Peripherals. "];
+}

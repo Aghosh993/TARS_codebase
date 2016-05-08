@@ -1,0 +1,11 @@
+digraph "lcd_set_refresh_frequency"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="lcd_set_refresh_frequency",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="lcd_set_divider",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__lcd__defines.html#ga20112b12e7b47a26059506024020153a"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="lcd_set_prescaler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__lcd__defines.html#ga14bcc0da9f44270ef20800cf4567b5ca"];
+}

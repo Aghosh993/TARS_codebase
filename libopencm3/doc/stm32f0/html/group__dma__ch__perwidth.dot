@@ -1,0 +1,9 @@
+digraph "DMA Channel Peripheral Word Width"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node0 [label="DMA Channel Peripheral\l Word Width",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 [label="DMA Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__dma__defines.html",tooltip="Defined Constants and Types for the STM32F0xx DMA Controller. "];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+}

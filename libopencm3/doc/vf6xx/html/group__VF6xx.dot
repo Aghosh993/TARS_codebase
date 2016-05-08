@@ -1,0 +1,15 @@
+digraph "VF6xx"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node3 [label="IOMUX-Control",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__VF6xx__iomuxc.html",tooltip="VF6xx IO Pad MUX Controller "];
+  Node1 [label="CCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__ccm__file.html",tooltip="VF6xx Clock Controller Module "];
+  Node0 [label="VF6xx",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 [label="GPIO",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__VF6xx__gpio.html",tooltip="VF6xx General-Purpose Input/Output (GPIO) "];
+  Node4 [label="UART",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__VF6xx__uart.html",tooltip="VF6xx Universal Asynchronous Receiver/Transmitter (UART) "];
+  Node0->Node1 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
+}

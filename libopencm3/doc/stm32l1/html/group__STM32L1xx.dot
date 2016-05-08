@@ -1,0 +1,33 @@
+digraph "STM32L1xx"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node6 [label="GPIO",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gpio__file.html",tooltip="libopencm3 STM32L1xx General Purpose I/O "];
+  Node3 [label="DAC",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__dac__file.html",tooltip="libopencm3 STM32L1xx DAC "];
+  Node13 [label="USART",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usart__file.html",tooltip="libopencm3 STM32L1xx USART "];
+  Node8 [label="IWDG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__iwdg__file.html",tooltip="libopencm3 STM32L1xx Independent Watchdog Timer "];
+  Node4 [label="DMA",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__dma__file.html",tooltip="libopencm3 STM32L1xx DMA "];
+  Node9 [label="PWR",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__pwr__file.html",tooltip="libopencm3 STM32L1xx Power Control "];
+  Node10 [label="RTC",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__rtc__file.html",tooltip="libopencm3 STM32L1xx RTC "];
+  Node11 [label="SPI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__spi__file.html",tooltip="libopencm3 STM32L1xx SPI "];
+  Node2 [label="CRC",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__crc__file.html",tooltip="libopencm3 STM32L1xx CRC "];
+  Node0 [label="STM32L1xx",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 [label="ADC",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__adc__file.html",tooltip="libopencm3 STM32L1xx Analog to Digital Converters "];
+  Node7 [label="I2C",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__i2c__file.html",tooltip="libopencm3 STM32L1xx I2C "];
+  Node5 [label="FLASH",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__flash__file.html",tooltip="libopencm3 STM32L1xx FLASH "];
+  Node12 [label="Timers",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__timer__file.html",tooltip="libopencm3 STM32L1xx Timers "];
+  Node0->Node1 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node5 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node6 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node7 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node8 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node9 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node10 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node11 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node12 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node13 [shape=plaintext, dir="back", style="solid"];
+}

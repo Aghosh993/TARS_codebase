@@ -1,0 +1,10 @@
+digraph "usb_midi_endpoint_descriptor"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="usb_midi_endpoint_descriptor",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" head" ,fontname="Helvetica"];
+  Node2 [label="usb_midi_endpoint_descriptor_head",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structusb__midi__endpoint__descriptor__head.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" jack" ,fontname="Helvetica"];
+  Node3 [label="usb_midi_endpoint_descriptor_body",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structusb__midi__endpoint__descriptor__body.html"];
+}

@@ -1,0 +1,9 @@
+digraph "GPIO Pin Direction and Analog/Digital Mode"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node0 [label="GPIO Pin Direction\l and Analog/Digital Mode",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 [label="GPIO Defines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gpio__defines.html",tooltip="Defined Constants and Types for the STM32L1xx General Purpose I/O "];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+}

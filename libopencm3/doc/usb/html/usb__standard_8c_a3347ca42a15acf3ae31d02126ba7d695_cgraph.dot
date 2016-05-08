@@ -1,0 +1,46 @@
+digraph "_usbd_standard_request"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="_usbd_standard_request",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="_usbd_standard_request\l_device",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__standard_8c.html#abd588664d0803d5bf7d4d263f34f2575"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="usb_standard_set_address",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__standard__file.html#ga2e39a66a58cc636b01e3d90cb70c7625"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="usb_standard_set_configuration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__standard__file.html#ga11f2ca9802883c0ff1dc312799e7250d"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="usb_standard_get_configuration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__standard__file.html#ga430326cdf658101dd4b02d52ebb0cf3c"];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="usb_standard_get_descriptor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__standard__file.html#gad9327961f96b6203ac232d69d53afcf6"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="usb_descriptor_index",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__standard__file.html#gaf52328d55b34702e49cb14ec9005ca19"];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="usb_descriptor_type",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__standard__file.html#ga2df65bb0dcba3643cde420b3fdc08ff0"];
+  Node6 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="build_config_descriptor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__standard__file.html#gaf8a21c66ec88535a258872791c468098"];
+  Node2 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="usb_standard_device\l_get_status",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__standard__file.html#ga2c512d44bd72a83d9b438859ab3ee352"];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="_usbd_standard_request\l_endpoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__standard_8c.html#aed9aa74939234f607611928534d3b1b9"];
+  Node11 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="usb_standard_endpoint\l_unstall",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__standard__file.html#ga9714d02e4367d72d66f7d71abe10a70f"];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="usbd_ep_stall_set",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__driver__defines.html#ga6d16be856512df298e40dfa31a216172"];
+  Node11 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="usb_standard_endpoint\l_stall",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__standard__file.html#gad24d6daf25ffd5539979b9ea1648ec6f"];
+  Node14 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="usb_standard_endpoint\l_get_status",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__standard__file.html#ga4cfdd2484f7002da2cc98eea1e6a69e9"];
+  Node15 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="usbd_ep_stall_get",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__driver__defines.html#ga396b34ccbe5bf6718417ef3ee0c3b788"];
+  Node1 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="_usbd_standard_request\l_interface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__standard_8c.html#aec01ef6ed66dcc2b50cc969b8be8f419"];
+  Node17 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="usb_standard_get_interface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__standard__file.html#ga22c09fa8b89c6d0cb46e290cfecdf33f"];
+  Node17 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="usb_standard_set_interface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__standard__file.html#ga137aae06450b52a0c22f7ffa6fba5ba0"];
+  Node17 -> Node20 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="usb_standard_interface\l_get_status",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__usb__standard__file.html#ga3af045144aef2572263f2ec0a2fdbef9"];
+}

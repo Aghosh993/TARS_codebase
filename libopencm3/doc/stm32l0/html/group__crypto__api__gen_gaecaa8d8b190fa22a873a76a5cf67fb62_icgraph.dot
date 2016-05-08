@@ -1,0 +1,15 @@
+digraph "crypto_wait_busy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="crypto_wait_busy",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="crypto_process_block",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__crypto__file.html#ga937aad66306fa452be50f418a4b4f644",tooltip="Start of encryption or decryption on data buffers. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="crypto_set_algorithm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__crypto__file.html#ga132b9deaf901e3c5a5d9c24929a4ded4",tooltip="Set the algoritm for Encryption/decryption. "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="crypto_set_iv",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__crypto__file.html#ga5f019038350f381a004c48be478f1268",tooltip="Set Initialization Vector. "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="crypto_set_key",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__crypto__file.html#ga93e0e5b68a320eacc059995c3aa2ffed",tooltip="Set key value to the controller. "];
+}
