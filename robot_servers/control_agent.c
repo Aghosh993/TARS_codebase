@@ -6,11 +6,13 @@
 #include <stdint.h>
 #include <unistd.h>
 #include <arpa/inet.h>
+#include <netinet/in.h>
 #include <sys/types.h>
 #include <netinet/in.h>
 #include <sys/socket.h>
 #include <signal.h>
 #include <pthread.h>
+#include <ifaddrs.h>
 
 // User includes:
 #include "rpi_comms.h"
@@ -18,11 +20,53 @@
  
 #define PORTNUM 8100
 
+#define BTN_A  0
+#define BTN_B  1
+#define BTN_X  2
+#define BTN_Y  3
+#define LT_BTN 4
+#define RT_BTN 5 // Doesn't work for some reason, maybe busted controller??
+#define VIEW_BTN  6
+#define MENU_BTN  7
+#define LEFT_STICK_BUTTON   8
+#define RIGHT_STICK_BUTTON  9
+
 int run_prog;
+uint8_t ip_addr[20];
 
 void sig_ctrlC_handler(int dummy_input)
 {
     run_prog = 0;
+}
+
+/*
+    Gets IP address on a given iface_name interface. Returns 0 on success, -1 otherwise
+ */
+
+int get_ip(uint8_t *iface_name, uint8_t *addr_octet_contents)
+{
+    struct ifaddrs **s = (struct ifaddrs **)malloc(10*sizeof(struct ifaddrs *));
+    getifaddrs(&s);
+    struct ifaddrs *tmp = s[0];
+
+    while (tmp) 
+    {
+        if (tmp->ifa_addr && tmp->ifa_addr->sa_family == AF_INET)
+        {
+            struct sockaddr_in *pAddr = (struct sockaddr_in *)tmp->ifa_addr;
+            if(strcmp(tmp->ifa_name, iface_name) == 0)
+            {
+                strcpy(addr_octet_contents, inet_ntoa(pAddr->sin_addr));
+                freeifaddrs(s);
+                return 0;
+            }
+        }
+
+        tmp = tmp->ifa_next;
+    }
+
+    freeifaddrs(s);
+    return -1;
 }
 
 /*
@@ -52,7 +96,7 @@ void *receive_uart_data(void *args)
     outgoing_status_packet *st = (outgoing_status_packet *)args;
     while(run_prog)
     {
-        printf("Hello from rx thread\n");
+        // printf("Hello from rx thread\n"); // Debug Line
         usleep(1000);
     }
 }
@@ -65,20 +109,25 @@ void *transmit_uart_data(void *args)
 
     while(run_prog)
     {
-        // printf("Hello from tx thread\n");
-        create_command_transmission(p->fwd_speed, p->turn_amt, p->movement_mode, p->turret_pan, p->turret_tilt, p->logic_control_states, outbuf);
+        // printf("Hello from tx thread\n"); // Debug line
+        create_command_transmission(p->fwd_speed, p->turn_amt, p->movement_mode, p->turret_pan, p->turret_tilt, p->logic_control_states, ip_addr, outbuf);
         for(i=0; i<sizeof(incoming_command_packet)+1; ++i)
         {
             uart_send_byte_linux(outbuf[i]);
-            printf("%d, ", outbuf[i]);
         }
-        printf("\n");
         usleep(1000);
     }    
 }
 
 int main(int argc, char *argv[])
 {
+    int ip_get_result = -1; // Result code set to failure by default
+    while(ip_get_result < 0)
+    {
+        ip_get_result = get_ip("wlan0", ip_addr);
+    }
+
+    printf("Acquired IP. Starting control agent with IP of %s on wlan0...\n", ip_addr);
     printf("Opening Pi UART...\n");
     setup_linux_serial("/dev/ttyS0");
     int ser_fd = get_serial_fd();
@@ -98,12 +147,12 @@ int main(int argc, char *argv[])
     outgoing_status_packet stat;
     incoming_command_packet cmd;
 
-    cmd.fwd_speed = 112;
-    cmd.turn_amt = -25;
-    cmd.movement_mode = 3;
-    cmd.turret_pan = 150;
-    cmd.turret_tilt = 45;
-    cmd.logic_control_states = 0b11110110;
+    cmd.fwd_speed = 0;
+    cmd.turn_amt = 0;
+    cmd.movement_mode = 0;
+    cmd.turret_pan = 0;
+    cmd.turret_tilt = 0;
+    cmd.logic_control_states = 0;
 
     if(pthread_create(&stm32_uart_rx_thread, NULL, receive_uart_data, &stat))
     {
@@ -165,8 +214,15 @@ int main(int argc, char *argv[])
     int chunk_len = 0;
     int i = 0;
 
+    uint8_t turret_pan_accum = 127U;
+    uint8_t turret_tilt_accum = 127U;
+
     while(consocket && run_prog)
     {
+        if(ip_get_result != 0)
+        {
+            ip_get_result = get_ip("wlan0", ip_addr);
+        }
         if(srv_st == ST_WAIT_FOR_CONN)
         {
             printf("Waiting for incoming connection\n"); 
@@ -218,8 +274,67 @@ int main(int argc, char *argv[])
                     // printf("Left bumper: %d | Right bumper: %d\n", data_to_joystick.joystick_data_output.left_bumper,
                     //                                                 data_to_joystick.joystick_data_output.right_bumper);
 
-                    printf("Button state: %d\n", data_to_joystick.joystick_data_output.button_states);
+                    // printf("Button state: %d\n", data_to_joystick.joystick_data_output.button_states);
                     /* Act on incoming data and set commands to STM32 over UART: */
+                    cmd.fwd_speed = (int8_t)(data_to_joystick.joystick_data_output.y_right / 256);
+                    cmd.turn_amt = (int8_t)(data_to_joystick.joystick_data_output.x_right / 256);
+
+                    if(data_to_joystick.joystick_data_output.y_right > 3000 || data_to_joystick.joystick_data_output.y_right < -3000)
+                    {
+                        cmd.movement_mode = 1U; //fwd drive
+                    }
+                    else
+                    {
+                        if(data_to_joystick.joystick_data_output.x_right < 3000)
+                        {
+                            cmd.movement_mode = 2U; // Left turn in place
+                        }
+                        else
+                        {
+                            cmd.movement_mode = 3U; // Right turn in place
+                        }
+                    }
+
+                    if(data_to_joystick.joystick_data_output.button_states & (1<<BTN_X))
+                    {
+                        if(turret_pan_accum > 0)
+                        {
+                            --turret_pan_accum;
+                        }
+                    }
+
+                    if(data_to_joystick.joystick_data_output.button_states & (1<<BTN_B))
+                    {
+                        if(turret_pan_accum < 255)
+                        {
+                            ++turret_pan_accum;
+                        }
+                    }
+
+                    if(data_to_joystick.joystick_data_output.button_states & (1<<BTN_A))
+                    {
+                        {
+                        if(turret_tilt_accum > 0)
+                            --turret_tilt_accum;
+                        }
+                    }
+
+                    if(data_to_joystick.joystick_data_output.button_states & (1<<BTN_Y))
+                    {
+                        if(turret_tilt_accum < 255)
+                        {
+                            ++turret_tilt_accum;
+                        }
+                    }
+
+                    cmd.turret_pan = turret_pan_accum;
+                    cmd.turret_tilt = turret_tilt_accum;
+                    cmd.logic_control_states = (uint8_t)(data_to_joystick.joystick_data_output.button_states & (1<<LT_BTN) |
+                                                data_to_joystick.joystick_data_output.button_states & (1<<RT_BTN) |
+                                                data_to_joystick.joystick_data_output.button_states & (1<<BTN_A) |
+                                                data_to_joystick.joystick_data_output.button_states & (1<<BTN_B) |
+                                                data_to_joystick.joystick_data_output.button_states & (1<<BTN_X) |
+                                                data_to_joystick.joystick_data_output.button_states & (1<<BTN_Y));
                 }
 
                 /*Reset counter:*/

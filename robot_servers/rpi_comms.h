@@ -3,6 +3,7 @@
 
 #include <stdlib.h>
 #include <stdint.h>
+#include <string.h>
 
 #define SERVO_PWR_EN_MASK	(1<<0)
 #define M1_HIGHSIDE_MASK	(1<<1)
@@ -15,6 +16,7 @@ typedef struct {
 	uint8_t turret_pan;
 	uint8_t turret_tilt;
 	uint8_t logic_control_states;
+	uint8_t rpi_ip_addr_string[17U];
 } incoming_command_packet;
 
 typedef struct {
@@ -31,7 +33,7 @@ typedef enum {
 void init_pi_comms(void);
 void process_incoming_data(uint8_t c);
 incoming_command_packet get_last_cmd_packet(void);
-void create_command_transmission(int8_t speed, int8_t turn, uint8_t mode, uint8_t pan, uint8_t tilt, uint8_t control_states, uint8_t *data_buffer);
+void create_command_transmission(int8_t speed, int8_t turn, uint8_t mode, uint8_t pan, uint8_t tilt, uint8_t control_states, uint8_t* ip_addr, uint8_t *data_buffer);
 void create_status_transmission(uint16_t battery_voltage, uint16_t servo_voltage, uint8_t alerts, uint8_t *outgoing_data_buffer);
 
 #endif

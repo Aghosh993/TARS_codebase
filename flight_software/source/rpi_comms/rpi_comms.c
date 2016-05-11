@@ -23,7 +23,9 @@ static void parse_incoming_buffer(uint8_t *input, incoming_command_packet *pack)
 	pack->movement_mode = data_to_packet.out_data.movement_mode;
 	pack->turret_pan = data_to_packet.out_data.turret_pan;
 	pack->turret_tilt = data_to_packet.out_data.turret_tilt;
-	pack->logic_control_states = data_to_packet.out_data.logic_control_states;	
+	pack->logic_control_states = data_to_packet.out_data.logic_control_states;
+
+	strncpy(pack->rpi_ip_addr_string, data_to_packet.out_data.rpi_ip_addr_string, 17U);
 }
 
 void init_pi_comms(void)
@@ -63,7 +65,7 @@ incoming_command_packet get_last_cmd_packet(void)
 	return p;
 }
 
-void create_command_transmission(int8_t speed, int8_t turn, uint8_t mode, uint8_t pan, uint8_t tilt, uint8_t control_states, uint8_t *data_buffer)
+void create_command_transmission(int8_t speed, int8_t turn, uint8_t mode, uint8_t pan, uint8_t tilt, uint8_t control_states, uint8_t* ip_addr, uint8_t *data_buffer)
 {
 	union {
 		incoming_command_packet in_data;
@@ -76,6 +78,8 @@ void create_command_transmission(int8_t speed, int8_t turn, uint8_t mode, uint8_
 	cmd_packet_to_data.in_data.turret_pan = pan;
 	cmd_packet_to_data.in_data.turret_tilt = tilt;
 	cmd_packet_to_data.in_data.logic_control_states = control_states;
+
+	strncpy(cmd_packet_to_data.in_data.rpi_ip_addr_string, ip_addr, 17U);
 
 	int i = 0;
 

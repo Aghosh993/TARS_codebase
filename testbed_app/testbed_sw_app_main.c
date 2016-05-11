@@ -58,6 +58,17 @@
 // #define LORANGE2 GPIOE, GPIO14
 // #define LGREEN2 GPIOE, GPIO15
 
+#define BTN_A  0
+#define BTN_B  1
+#define BTN_X  2
+#define BTN_Y  3
+#define LT_BTN 4
+#define RT_BTN 5 // Doesn't work for some reason, maybe busted controller??
+#define VIEW_BTN  6
+#define MENU_BTN  7
+#define LEFT_STICK_BUTTON   8
+#define RIGHT_STICK_BUTTON  9
+
 // #define INCLUDE_PWM_TEST_SHELL	1
 // #define ENABLE_PWM_TEST_SHELL	1
 
@@ -339,7 +350,7 @@ int set_angle(int joint, float angle)
 void simple_fwd_gait(float rt)
 {
 	float m1_fwd_max = 175;
-	float m1_fwd_min = 57+rt;
+	float m1_fwd_min = 87+rt;
 
 	float m4_fwd_max = 98+rt;//95;
 	float m4_fwd_min = 0;
@@ -353,6 +364,75 @@ void simple_fwd_gait(float rt)
 	uint16_t speed_inv = 1U;
 
 	#ifdef BASIC_GAIT
+		// set_angle(6, 20.0f);
+		// timekeeper_delay(100U);
+		// set_angle(2, m2_fwd_max);
+		// timekeeper_delay(100U);
+		// set_angle(1, m1_fwd_max);
+		// timekeeper_delay(15U); //??
+		// set_angle(6, 50.0f);
+		// timekeeper_delay(100U);
+		// set_angle(7, 20.0f);
+		// timekeeper_delay(150U);
+		// set_angle(3, m3_fwd_max);
+		// timekeeper_delay(100U);
+		// set_angle(4, m4_fwd_max);
+		// timekeeper_delay(100U);
+		// set_angle(7, 50.0f);
+		// timekeeper_delay(100U);
+		
+		// set_angle(5, 20.0f);
+		// timekeeper_delay(200U);
+		// set_angle(1, m1_fwd_min);
+		// timekeeper_delay(250U); //
+		// set_angle(2, m2_fwd_min);
+		// timekeeper_delay(15U);
+		// set_angle(5, 50.0f);
+		// timekeeper_delay(15U);
+		// set_angle(8, 10.0f);
+		// timekeeper_delay(200U); //
+		// set_angle(4, m4_fwd_min);
+		// timekeeper_delay(100U);
+		// set_angle(3, m3_fwd_min);
+		// timekeeper_delay(15U);
+		// set_angle(8, 50.0f);
+
+		// Based on latest Git code:
+
+		// set_angle(6, 20.0f);
+		// timekeeper_delay(100U);
+		// set_angle(2, m2_fwd_max);
+		// timekeeper_delay(100U);
+		// set_angle(1, m1_fwd_max);
+		// timekeeper_delay(15U);
+		// set_angle(6, 50.0f);
+		// timekeeper_delay(100U);
+		// set_angle(7, 20.0f);
+		// timekeeper_delay(150U);
+		// set_angle(3, m3_fwd_max);
+		// timekeeper_delay(100U);
+		// set_angle(4, m4_fwd_max);
+		// timekeeper_delay(100U);
+		// set_angle(7, 50.0f);
+		// timekeeper_delay(100U);
+		
+		// set_angle(5, 20.0f);
+		// timekeeper_delay(250U);
+		// set_angle(1, m1_fwd_min);
+		// timekeeper_delay(250U); //
+		// set_angle(2, m2_fwd_min);
+		// timekeeper_delay(15U);
+		// set_angle(5, 50.0f);
+		// timekeeper_delay(15U);
+		// set_angle(8, 20.0f);
+		// timekeeper_delay(200U); //
+		// set_angle(4, m4_fwd_min);
+		// timekeeper_delay(100U);
+		// set_angle(3, m3_fwd_min);
+		// timekeeper_delay(15U);
+		// set_angle(8, 50.0f);
+
+		// Based on Git first stable commit:
 		set_angle(6, 20.0f);
 		timekeeper_delay(100U);
 		set_angle(2, m2_fwd_max);
@@ -611,39 +691,6 @@ int main(void)
 	QuadRotor_motor3_setDuty(0.5f);
 	QuadRotor_motor4_setDuty(0.5f);
 
-	// float corrected_gyro_data[3];
-
-	// float motor1_angle = 90.0f;
-	// float motor2_angle = 90.0f;
-	// float motor3_angle = 90.0f;
-	// float motor4_angle = 90.0f;
-
-	// float motor5_angle = 45.0f;
-	// float motor6_angle = 45.0f;
-	// float motor7_angle = 45.0f;
-	// float motor8_angle = 45.0f;
-
-	// float motor1_angle_offset = 0.0f;
-	// float motor2_angle_offset = 0.0f;
-	// float motor3_angle_offset = 0.0f;
-	// float motor4_angle_offset = 0.0f;
-	// float motor5_angle_offset = 0.8f;
-	// float motor6_angle_offset = 0.4f;
-	// float motor7_angle_offset = 0.8f;
-	// float motor8_angle_offset = 0.4f;
-
-	set_angle(1, 135.0f);
-	set_angle(2, 45.0f);
-	set_angle(3, 135.0f);
-	set_angle(4, 45.0f);
-
-	set_angle(5, 45.0f);
-	set_angle(6, 45.0f);
-	set_angle(7, 45.0f);
-	set_angle(8, 45.0f);
-
-	float angle = 0.0f;
-
 	/*
 		Enable highside switches as logic channels:
 	 */
@@ -657,6 +704,29 @@ int main(void)
 	setup_servo_enable_outut();
 	enable_servo_bus();
 
+	timekeeper_delay(1000U);
+
+	set_angle(1, 135.0f);
+	set_angle(2, 45.0f);
+	set_angle(3, 135.0f);
+	set_angle(4, 45.0f);
+
+	set_angle(5, 45.0f);
+	set_angle(6, 45.0f);
+	set_angle(7, 45.0f);
+	set_angle(8, 45.0f);
+
+	float angle = 0.0f;
+
+	uint16_t tilt_val = 2700U;
+	uint16_t pan_val = 58880U;
+
+	timer_set_oc_value(TIM2, TIM_OC1, tilt_val);	//Tilt
+	timer_set_oc_value(TIM2, TIM_OC2, pan_val);		//Pan
+	timekeeper_delay(1000U);
+	timer_disable_oc_output(TIM2, TIM_OC1);
+	timer_disable_oc_output(TIM2, TIM_OC2);
+
 	/*
 		Initialize voltage monitor ADC channels:
 	 */
@@ -664,24 +734,22 @@ int main(void)
 
 	printf("Starting...\r\n");
 
-	float turn_amt = 55.0f;
+	float turn_amt = 8.0f; // +ve turns right, -ve turns left...
 	int adcval = 0;
 	incoming_command_packet cmd;
-	// adc_start_conversion_regular(ADC2);
+
+	timekeeper_delay(5000U);
 
 	while (1)
 	{
 		cmd = get_last_cmd_packet();
-		// simple_fwd_gait(turn_amt);
+		turn_amt = (float)cmd.turn_amt/(float)2.3f;
+		if(cmd.movement_mode == 1U)
+		{
+			simple_fwd_gait(turn_amt);
+		}
 
-		// Simple test of high-side switches for the DC brushed motor outputs:
-		// gpio_set(GPIOD, GPIO6 | GPIO7);
-		// timekeeper_delay(500U);
-		// gpio_clear(GPIOD, GPIO6 | GPIO7);
-		// timekeeper_delay(500U);
-
-		// Testing airsoft control channels:
-		if(gpio_get(GPIOD, GPIO15) > 0)
+		if((cmd.logic_control_states & (1<<LT_BTN)))// || (cmd.logic_control_states & (1<<RT_BTN)))
 		{
 			#ifdef HIGHSIDE_SWITCHES_USE_PWM
 				set_m1_highside_switch(0.80f);
@@ -703,10 +771,80 @@ int main(void)
 			#ifndef HIGHSIDE_SWITCHES_USE_PWM
 				set_m1_highside_switch(0);
 				set_m2_highside_switch(0);
-			#endif
+			#endif			
 		}
+
+		if(cmd.logic_control_states & (1<<BTN_A))
+		{
+			tilt_val -= 10U;
+			timer_enable_oc_output(TIM2, TIM_OC1);
+			timer_set_oc_value(TIM2, TIM_OC1, tilt_val);	//Tilt
+			timekeeper_delay(100U);
+			timer_disable_oc_output(TIM2, TIM_OC1);
+		}
+
+		if(cmd.logic_control_states & (1<<BTN_Y))
+		{
+			tilt_val += 10U;
+			timer_enable_oc_output(TIM2, TIM_OC1);
+			timer_set_oc_value(TIM2, TIM_OC1, tilt_val);	//Tilt
+			timekeeper_delay(100U);
+			timer_disable_oc_output(TIM2, TIM_OC1);	
+		}
+
+		if(cmd.logic_control_states & (1<<BTN_X))
+		{
+			pan_val -= 10U;
+			timer_enable_oc_output(TIM2, TIM_OC2);
+			timer_set_oc_value(TIM2, TIM_OC2, pan_val);	//Pan
+			timekeeper_delay(100U);
+			timer_disable_oc_output(TIM2, TIM_OC2);
+		}
+
+		if(cmd.logic_control_states & (1<<BTN_B))
+		{
+			pan_val += 10U;
+			timer_enable_oc_output(TIM2, TIM_OC2);
+			timer_set_oc_value(TIM2, TIM_OC2, pan_val);	//Pan
+			timekeeper_delay(100U);
+			timer_disable_oc_output(TIM2, TIM_OC2);	
+		}
+
+		// Simple test of high-side switches for the DC brushed motor outputs:
+		// gpio_set(GPIOD, GPIO6 | GPIO7);
+		// timekeeper_delay(500U);
+		// gpio_clear(GPIOD, GPIO6 | GPIO7);
+		// timekeeper_delay(500U);
+
+		// Testing airsoft control channels:
+		// if(gpio_get(GPIOD, GPIO15) > 0)
+		// {
+		// 	#ifdef HIGHSIDE_SWITCHES_USE_PWM
+		// 		set_m1_highside_switch(0.80f);
+		// 		set_m2_highside_switch(0.80f);
+		// 	#endif
+
+		// 	#ifndef HIGHSIDE_SWITCHES_USE_PWM
+		// 		set_m1_highside_switch(1);
+		// 		set_m2_highside_switch(1);
+		// 	#endif
+		// }
+		// else
+		// {
+		// 	#ifdef HIGHSIDE_SWITCHES_USE_PWM
+		// 		set_m1_highside_switch(0.00f);
+		// 		set_m2_highside_switch(0.00f);
+		// 	#endif
+
+		// 	#ifndef HIGHSIDE_SWITCHES_USE_PWM
+		// 		set_m1_highside_switch(0);
+		// 		set_m2_highside_switch(0);
+		// 	#endif
+		// }
 		// printf("%d\r\n", gpio_get(GPIOD, GPIO15));
-		printf("%d %d %d %d %d %d\r\n", cmd.fwd_speed, cmd.turn_amt, cmd.movement_mode, cmd.turret_pan, cmd.turret_tilt, cmd.logic_control_states);
+		printf("%d %d %d %d %d %d %s\r\n", cmd.fwd_speed, cmd.turn_amt, cmd.movement_mode, 
+											cmd.turret_pan, cmd.turret_tilt, cmd.logic_control_states,
+											cmd.rpi_ip_addr_string);
 		// while(!adc_eoc(ADC2));
 		// adcval = adc_read_regular(ADC2);
 		// printf("%f\r\n", (float)7.045f*(float)adcval*(float)3.0f/(float)4096.0f);
